@@ -133,7 +133,7 @@ a {
   text-align: center;
 }
 .pack1 {
-  margin-top: 20px;
+  margin-top: 50px;
   margin-left:40px;
   display: flex; /* Activer la flexbox pour les éléments */
   flex-direction: column; /* Aligner les éléments en colonne */
@@ -199,7 +199,33 @@ a {
 .form-group input[type="checkbox"] {
   margin-right: 5px;
 }
-
+.container{
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    z-index: 1;
+}
+.section {
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    margin-top:70px;
+  }
+  .delivery-option {
+    display: flex;
+    align-items: center;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+  .submit-btn{
+    margin: 0 auto; /* Cette ligne centrer le bouton */
+    display: block; /* Cette ligne pour assurer le centrage */
+  }
 
 
 
@@ -207,6 +233,16 @@ a {
 
 
 /* Panier */
+.cart {
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 100px;
+    margin-left:150px;
+    margin-right:150px;
+    background-color: #ffffff
+}
+
 .item img {
   width: 100px;
   margin-right: 10px;
@@ -246,27 +282,8 @@ a {
   margin: 0 auto; /* Cette ligne centrer le bouton */
   display: block; /* Cette ligne pour assurer le centrage */
 }
-.section {
-  margin-bottom: 20px;
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding-left: 5%;
-  padding-top: 2%;
-  padding-bottom: 5%;
-  padding-right: 5%;
-  margin-top: 30px;
-}
-.delivery-option {
-  display: flex;
-  align-items: center;
-}
-.form-group {
-  margin-bottom: 10px;
-}
-.submit-btn{
-  margin: 0 auto; /* Cette ligne centrer le bouton */
-  display: block; /* Cette ligne pour assurer le centrage */
-}
+
+
 
 
 
@@ -343,7 +360,7 @@ h1 {
   height: 50px; /* Ajustez la taille de l'image */
   border-radius: 50%; /* Assurez-vous que l'image est ronde */
 }
-#likerButton {
+#likeButton {
   position:absolute;
   top: 20px;
   right: 160px;
