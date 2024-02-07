@@ -7,10 +7,13 @@ class UserModel extends DBModel {
 
     function check_login(string $name, string $mdp) {
         $result = [];
+        
+        /*
         if (!$this->connected) {
 
             return $result;
         }
+        */
 
         $request = "SELECT name, mdp FROM utilisateur WHERE name=:name AND mdp=:mdp";
         $statement = $this->db->prepare($request);

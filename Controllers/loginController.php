@@ -18,13 +18,14 @@
             }
             else {
 
-                $something_to_say = "Invalid login and/or password.";  
+                $something_to_say = "Invalid login and/or password.";
             }
         }
         else {
 
             $something_to_say = "Missing login and/or password";
         }
+        
     }
 
     /*

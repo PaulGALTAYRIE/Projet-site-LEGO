@@ -10,12 +10,18 @@ class DBModel {
      }
 
     private function connect_to_db() {   
+        $engine='mysql';
+        $host = 'localhost';
+        $dbname = 'lego_web_site';
+        $user = 'root';
+        $pwd = '';
 
         try {
-            $this->db = new PDO('mariadb:host=localhost;dbname=lego_web_site;charset=utf8', 'root', '');
+            $this->db = new PDO($engine.':host='.$host.';dbname='.$dbname.';charset=utf8', $user, $pwd, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
             return true;
         }
         catch (Exception $e) {
+            print_r($e);
             return false;
         }
     }

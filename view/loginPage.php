@@ -13,11 +13,11 @@
         <?php 
             // if an error happened
             if (isset($something_to_say)) {
-                include_error_message($something_to_say);
+                print_r($something_to_say);
             }
         ?>
 
-        <form id="login" method="get" action="../Controllers/loginController.php">
+        <form id="login" method="post" action="../Controllers/loginController.php">
             <label><b>User Name</b></label><br>
             <input type="text" name="name" id="name" placeholder="username"><br><br>
             <label><b>Password</b></label><br>
