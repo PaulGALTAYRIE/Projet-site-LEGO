@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>Login Form</title>
-    <link rel="stylesheet" type="text/css" href="styles/siteLego.css">
+    <link rel="stylesheet" type="text/css" href="../styles/siteLego.css">
 </head>
 <body id="login">
 <div class="backgroundBlur"></div>
-  <img src="figs/LegoLogo.png" alt="Login Image" id="logo1" width="75" height="75">
+  <img src="../figs/LegoLogo.png" alt="Login Image" id="logo1" width="75" height="75">
     <div class="login">
         <h2>Login Page</h2><br>
 
