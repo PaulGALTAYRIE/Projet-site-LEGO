@@ -1,6 +1,6 @@
 <?php
 
-    require_once(__DIR__."Models/utilisateurModel.php");
+    require_once("../Models/utilisateurModel.php");
 
     if (isset($_POST['name']) && isset($_POST['mdp'])) {
 
@@ -13,8 +13,8 @@
             if (isset($result['name'])) {
 
                 session_start();
-                $_SESSION['firstname'] = $result['firstname'];
-                $_SESSION['lastname'] = $result['lastname'];
+                $_SESSION['name'] = $result['name'];
+                $_SESSION['mdp'] = $result['mdp'];
             }
             else {
 
@@ -27,15 +27,17 @@
         }
     }
 
+    /*
     if (isset($_POST['logout'])) {
         session_start();
         session_destroy();
     }
+    */
 
-    if (isset($_SESSION['firstname'])) {
-        require_once(__DIR__."/view/catalogueLego.php");
+    if (isset($_SESSION['name'])) {
+        require_once("../view/catalogueLego.php");
     }
     else {
-        require_once(__DIR__."/view/loginPage.php");
+        require_once("../view/loginPage.php");
     }
 

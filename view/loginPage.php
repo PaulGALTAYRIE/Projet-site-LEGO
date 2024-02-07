@@ -17,18 +17,17 @@
             }
         ?>
 
-        <form id="login" method="get" action="login.php">
+        <form id="login" method="get" action="../Controllers/loginController.php">
             <label><b>User Name</b></label><br>
             <input type="text" name="name" id="name" placeholder="username"><br><br>
             <label><b>Password</b></label><br>
             <input type="password" name="mdp" id="mdp" placeholder="password"><br><br>
-            <input type="button" name="log" id="log" value="Log In Here">
+            <button type="submit">Submit</button>
             <br><br>
             <input type="checkbox" id="check">
             <span>Remember me</span><br><br>
             Forgot <a href="#">Password</a>
         </form>
-
 
     </div>
 </body>

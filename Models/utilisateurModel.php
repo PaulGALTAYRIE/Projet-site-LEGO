@@ -12,7 +12,7 @@ class UserModel extends DBModel {
             return $result;
         }
 
-        $request = "SELECT * FROM utilisateur WHERE name=:name AND mdp=:mdp";
+        $request = "SELECT name, mdp FROM utilisateur WHERE name=:name AND mdp=:mdp";
         $statement = $this->db->prepare($request);
         $statement->execute([
             "name" => $name,
