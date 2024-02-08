@@ -5,3 +5,12 @@ if (isset($_POST['panierButton'])) {
     exit();
 }
 
+if (isset($_POST['checkoutButton'])) {
+    header("Location: ../view/paiementPage.php");
+    exit();
+}
+
+if (isset($_POST['logoButton'])) {
+    header("Location: /view/cataloguePage.php");
+    exit();
+}

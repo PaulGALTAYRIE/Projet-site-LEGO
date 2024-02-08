@@ -27,9 +27,19 @@
 
     <button id="likeButton">Like</button>
     <img src="../figs/Like.JPG" alt="Image de like" id="likeImage">
+
+
+
     <div class="logo">
-        <img src="../figs/LegoLogo.png" alt="Logo" width="75" height="75" class="logo">
+        <form method="post" action="../Controllers/navOngletClient.php">
+            <button type="submit" name="logoButton" class="logo">
+                <img src="../figs/LegoLogo.png" alt="Logo" width="75" height="75" class="logo">
+            </button>
+        </form>
     </div>
+
+
+
     <div class="backgroundBlur"></div>
     <div class="catalogue">
         <div class="pack1">

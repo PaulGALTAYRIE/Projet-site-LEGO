@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validation de Commande</title>
-    <link rel="stylesheet" href="SiteLego.css">
+    <link rel="stylesheet" href="../styles/siteLego.css">
 </head>
 <body id="ValidationPaiement">
     <div class="bandeau"></div>
     <button id="profilButton">Profil</button>
-    <img src="figs/Profil.png" alt="Image de profil" id="profilImage">
+    <img src="../figs/Profil.png" alt="Image de profil" id="profilImage">
+
+    <form method="post" action="../Controllers/navOngletClient.php">
+        <label><b>panierImage</b></label><br>
+        <button type="submit" name="panierButton" id="panier" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+            <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">
+        </button><br><br>
+    </form>
+<!--
     <button id="panierButton">Panier</button>
-    <img src="figs/Panier.JPG" alt="Image du panier" id="panierImage">
+    <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">
+-->
+
     <button id="likeButton">Like</button>
-    <img src="figs/Like.JPG" alt="Image de like" id="likeImage">
+    <img src="../figs/Like.JPG" alt="Image de like" id="likeImage">
+
     <div class="logo">
-        <img src="figs/LegoLogo.png" alt="Logo" width="75" height="75" class="logo">
+        <form method="post" action="../Controllers/navOngletClient.php">
+            <button type="submit" name="logoButton" class="logo">
+                <img src="../figs/LegoLogo.png" alt="Logo" width="75" height="75" class="logo">
+            </button>
+        </form>
     </div>
+
     <div class="backgroundBlur"></div>
     <div class="container">
 
@@ -88,15 +104,15 @@
                     <label for="delivery-post" class="delivery-option">
                     <input type="radio" id="delivery-post" name="delivery-method" value="post">
                     <label for="delivery-post">
-                    <img src="figs/laposte.JPG" alt="logolaposte" id="logolaposte">
+                    <img src="../figs/laposte.JPG" alt="logolaposte" id="logolaposte">
                     </label>
                     <input type="radio" id="delivery-dhl" name="delivery-method" value="dhl">
                     <label for="delivery-dhl">
-                    <img  src="figs/Dhl.JPG" alt="logoDHL" id="logoDHL">
+                    <img  src="../figs/Dhl.JPG" alt="logoDHL" id="logoDHL">
                     </label>
                     <input type="radio" id="delivery-dpd" name="delivery-method" value="dpd">
                     <label for="delivery-dpd">
-                    <img src="figs/DPD.JPG" alt="logoDPD" id="logoDPD">
+                    <img src="../figs/DPD.JPG" alt="logoDPD" id="logoDPD">
                     </label>
                 </div>
             </form>
