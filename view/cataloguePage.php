@@ -12,8 +12,19 @@
 
     <button id="profilButton">Profil</button>
     <img src="../figs/Profil.png" alt="Image de profil" id="profilImage">
+
+
+    <form method="post" action="../Controllers/navOngletClient.php">
+        <label><b>panierImage</b></label><br>
+        <button type="submit" name="panierButton" id="panier" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+            <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">
+        </button><br><br>
+    </form>
+<!--
     <button id="panierButton">Panier</button>
     <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">
+-->
+
     <button id="likeButton">Like</button>
     <img src="../figs/Like.JPG" alt="Image de like" id="likeImage">
     <div class="logo">

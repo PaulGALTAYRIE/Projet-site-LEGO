@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panier</title>
-    <link rel="stylesheet" href="SiteLego.css">
+    <link rel="stylesheet" href="../styles/siteLego.css">
 </head>
 <body>
     <div class="Panier">
         <h1>Panier</h1>
         <div class="bandeau"></div>
         <button id="profilButton">Profil</button>
-        <img src="figs/Profil.png" alt="Image de profil" id="profilImage">
-        <button id="panierButton">Panier</button>
-        <img src="figs/Panier.JPG" alt="Image du panier" id="panierImage">
+        <img src="../figs/Profil.png" alt="Image de profil" id="profilImage">
+        <button id="panierButton" action="re">Panier</button>
+        <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">
         <button id="likeButton">Like</button>
-        <img src="figs/Like.JPG" alt="Image de like" id="likeImage">
+        <img src="../figs/Like.JPG" alt="Image de like" id="likeImage">
         <div class="logo">
-            <img src="figs/LegoLogo.png" alt="Logo" width="75" height="75" class="logo">
+            <img src="../figs/LegoLogo.png" alt="Logo" width="75" height="75" class="logo">
         </div>
         <div class="backgroundBlur"></div>
         <div class="cart">

@@ -36,7 +36,7 @@
     */
 
     if (isset($_SESSION['name'])) {
-        require_once("../view/catalogueLego.php");
+        require_once("../view/cataloguePage.php");
     }
     else {
         require_once("../view/loginPage.php");
