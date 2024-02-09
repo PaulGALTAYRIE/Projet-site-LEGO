@@ -15,6 +15,7 @@
                 session_start();
                 $_SESSION['name'] = $result['name'];
                 $_SESSION['mdp'] = $result['mdp'];
+                $_SESSION['statut'] = $result['statut'];
             }
             else {
 
@@ -36,8 +37,14 @@
     */
 
     if (isset($_SESSION['name'])) {
-        require_once("../view/cataloguePage.php");
+        if($_SESSION['statut'] == 0) {
+            require_once("../view/cataloguePage.php");
+        }
+        if($_SESSION['statut'] == 1) {
+            require_once("../view/adminPage.php");
+        }
     }
+    
     else {
         require_once("../view/loginPage.php");
     }
