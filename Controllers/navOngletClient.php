@@ -14,3 +14,8 @@ if (isset($_POST['logoButton'])) {
     header("Location: /view/cataloguePage.php");
     exit();
 }
+
+if (isset($_POST['profilButton'])) {
+    header("Location: /view/ProfilPage.php");
+    exit();
+}

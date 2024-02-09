@@ -1,3 +1,7 @@
+<?php
+include_once '../view/includes.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +12,10 @@
 <div class="backgroundBlur"></div>
   <img src="../figs/LegoLogo.png" alt="Login Image" id="logo1" width="75" height="75">
     <div class="login">
-        <h2>Login Page</h2><br>
+
+    <main>
+
+        <h2>Login Page</h2>
 
         <?php 
             // if an error happened
@@ -16,7 +23,6 @@
                 print_r($something_to_say);
             }
         ?>
-
         <form id="login" method="post" action="../Controllers/loginController.php">
             <label><b>User Name</b></label><br>
             <input type="text" name="name" id="name" placeholder="username"><br><br>
@@ -28,7 +34,10 @@
             <span>Remember me</span><br><br>
             Forgot <a href="#">Password</a>
         </form>
-
     </div>
+
+    </main>
+
+    <?php include_footer_client(); ?>
 </body>
 </html>

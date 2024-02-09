@@ -1,0 +1,60 @@
+<?php
+
+    function include_header_client() {
+        ?>
+        <header>
+            <div class="bandeau"></div>
+            <!-- logo / redirection catalogue -->
+            <div class="logo">
+                <form method="post" action="../Controllers/navOngletClient.php">
+                    <button type="submit" name="logoButton" class="logo">
+                        <img src="../figs/LegoLogo.png" alt="Logo" width="75" height="75" class="logo">
+                    </button>
+                </form>
+            </div>
+
+            <!-- redirection profil -->
+            <form method="post" action="../Controllers/navOngletClient.php">
+                <button type="submit" name="profilButton" id="profil" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+                    <img src="../figs/Profil.png" alt="Image de profil" id="profilImage">
+                </button>
+            </form>    
+            
+            <!--like-->
+            <button id="likeButton">Like</button>
+            <img src="../figs/Like.JPG" alt="Image de like" id="likeImage">
+
+            <!-- redirection Panier -->
+            <form method="post" action="../Controllers/navOngletClient.php">
+                <button type="submit" name="panierButton" id="panier" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+                    <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">
+                </button>
+            </form>
+
+            <!-- logout -->
+            <form id=logout method="post" action="../Controllers/loginController.php">
+                <button type="submit" name="logoutButton" id="logout" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+                    <img src="../figs/logout.PNG" alt="Image du logout" id="logoutImage">
+                </button><br><br>
+            </form>
+        </header>
+        <?php
+    }
+
+
+    function include_footer_client() {
+        ?>
+        <footer>
+            <span>Copyright! ©️LEGO</span>
+            <span>made by : FVKP</span>
+            <a href="mailto: contact@lego.com" type="Contact">Contact</a>
+        </footer>
+        <?php
+    }
+
+
+    function include_error_message($message) {
+        echo "<p class='error_message'>" . $message . "</p>";
+    }
+    
+?>
