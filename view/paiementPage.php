@@ -8,23 +8,13 @@
 </head>
 <body id="ValidationPaiement">
     <div class="bandeau"></div>
-    <button id="profilButton">Profil</button>
-    <img src="../figs/Profil.png" alt="Image de profil" id="profilImage">
 
-    <form method="post" action="../Controllers/navOngletClient.php">
-        <label><b>panierImage</b></label><br>
-        <button type="submit" name="panierButton" id="panier" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
-            <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">
-        </button><br><br>
-    </form>
-<!--
-    <button id="panierButton">Panier</button>
-    <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">
--->
+    <!-- Début du bandeau de navigation -->
 
-    <button id="likeButton">Like</button>
-    <img src="../figs/Like.JPG" alt="Image de like" id="likeImage">
+    <h1>Order validation</h1>
+    <div class="bandeau"></div>
 
+    <!-- logo / redirection catalogue -->
     <div class="logo">
         <form method="post" action="../Controllers/navOngletClient.php">
             <button type="submit" name="logoButton" class="logo">
@@ -33,10 +23,34 @@
         </form>
     </div>
 
+    <!-- redirection profil -->
+    <button id="profilButton">Profil</button>
+    <img src="../figs/Profil.png" alt="Image de profil" id="profilImage">
+
+    <!--like-->
+    <button id="likeButton">Like</button>
+    <img src="../figs/Like.JPG" alt="Image de like" id="likeImage">
+
+    <!-- redirection Panier -->
+    <form method="post" action="../Controllers/navOngletClient.php">
+        <button type="submit" name="panierButton" id="panier" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+            <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">
+        </button>
+    </form>
+
+    <!-- logout -->
+    <form id=logout method="post" action="../Controllers/loginController.php">
+        <button type="submit" name="logoutButton" id="logout" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+            <img src="../figs/logout.PNG" alt="Image du logout" id="logoutImage">
+        </button><br><br>
+    </form>
+
+    <!-- Fin du bandeau -->
+
+    </div>
+
     <div class="backgroundBlur"></div>
     <div class="container">
-
-        <h1>Order validation</h1>
         
         <!-- Section Address -->
         <div class="section">

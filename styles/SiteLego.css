@@ -1,6 +1,3 @@
-
-
-
 /* Login*/
 #logo1{
   padding-left: 48%;
@@ -285,23 +282,24 @@ a {
 
 
 
-
-
-
-
-
 /*Commun*/
+
+
 body {
   margin: 0;
   padding: 0;
   font-family:Arial,sans-serif;
 }
+
+
 h1 {
   text-align: center;
   color:#474956;
   z-index: 1; /* Envoyer le titre au premier plan */
   position: relative; /* Ajoutez cette ligne */
 }
+
+
 .backgroundBlur {
   position: fixed;
   top: 0;
@@ -360,6 +358,7 @@ h1 {
   height: 50px; /* Ajustez la taille de l'image */
   border-radius: 50%; /* Assurez-vous que l'image est ronde */
 }
+
 #likeButton {
   position:absolute;
   top: 20px;
@@ -374,11 +373,32 @@ h1 {
 #likeImage {
   position:absolute;
   top: 20px;
-  right: 160px; /* Ajustez la valeur en fonction de la taille de votre image */
+  right: 160px; /* Ajustez la valeur en fonction de la taille de votre image  */
   width: 50px; /* Ajustez la taille de l'image */
   height: 50px; /* Ajustez la taille de l'image */
   border-radius: 50%; /* Assurez-vous que l'image est ronde */
 }
+
+#logoutButton {
+  position: absolute;
+  top: 20px;
+  right: 230px; /* Ajustez la position en fonction de votre mise en page */
+  width: 50px; /* Ajustez la taille du bouton */
+  height: 50px; /* Ajustez la taille du bouton */
+  border-radius: 50%;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+#logoutImage {
+  position: absolute;
+  top: 20px;
+  right: 230px; /* Ajustez la position en fonction de votre mise en page */
+  width: 50px; /* Ajustez la taille de l'image */
+  height: 50px; /* Ajustez la taille de l'image */
+  border-radius: 50%;
+}
+
 .logo {
   border-radius: 0%;
   position: absolute;

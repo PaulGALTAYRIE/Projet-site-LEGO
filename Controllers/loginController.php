@@ -29,12 +29,14 @@
         
     }
 
-    /*
+    
     if (isset($_POST['logout'])) {
         session_start();
         session_destroy();
+
+        require("../view/loginPage.php");
     }
-    */
+    
 
     if (isset($_SESSION['name'])) {
         if($_SESSION['statut'] == 0) {
