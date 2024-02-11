@@ -30,5 +30,13 @@ class UserModel extends DBModel {
         return $result;
     }
 
+    function create_user(string $name, string $mdp, string $email, int $number, string $coutry, string $adress, int $code_postal, string $statut ){
+        $request = "IMPORT "
+
+
+
+
+    }
+
 }
 
