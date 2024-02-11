@@ -1,6 +1,4 @@
-<?php
-include_once '../view/includes.php';
-?>
+<?php include_once '../view/includes.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,38 +10,35 @@ include_once '../view/includes.php';
 </head>
 <body>
     <div class="Panier">
-    
         <h1>Panier</h1>
         <?php include_header_client(); ?>
 
-        </div>
-
-        <div class="backgroundBlur"></div>
-        <div class="cart">
-            <div class="item">
-                <img src="https://via.placeholder.com/100" alt="Product Image">
-                <div class="item-details">
-                    <h2>Product Name</h2>
-                    <p>Description of the product.</p>
-                    <p>Price: $10.00</p>
+        <main>
+            <div class="backgroundBlur"></div>
+            <div class="cart">
+                <div class="item">
+                    <img src="https://via.placeholder.com/100" alt="Product Image">
+                    <div class="item-details">
+                        <h2>Product Name</h2>
+                        <p>Description of the product.</p>
+                        <p>Price: $10.00</p>
+                    </div>
+                    <button class="remove-btn">Remove</button>
                 </div>
-                <button class="remove-btn">Remove</button>
+                <!-- Add more items here if needed -->
             </div>
-            <!-- Add more items here if needed -->
-        </div>
-        <div class="total">
-            <p>Total: $0.00</p>
+            <div class="total">
+                <p>Total: $0.00</p>
 
-        <form method= "post" action="../Controllers/navOngletClient.php">
-            <button type="submit" name="checkoutButton">Checkout</button>
-        </form>
+                <form method="post" action="../Controllers/navOngletClient.php">
+                    <button type="submit" name="checkoutButton">Checkout</button>
+                </form>
+            </div>
+        </main>
 
-        <!--
-            <button class="checkout-btn">Checkout</button>
-        -->
-
-        </div>
     </div>
-    <?php include_footer_client(); ?>
+
 </body>
+<?php include_footer_client(); ?>
+
 </html>

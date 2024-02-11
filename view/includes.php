@@ -45,9 +45,9 @@
     function include_footer_client() {
         ?>
         <footer>
-            <span>Copyright! ©️LEGO</span>
-            <span>made by : FVKP</span>
-            <a href="mailto: contact@lego.com" type="Contact">Contact</a>
+            <div class="footerLeft">Copyright! ©️LEGO</div>
+            <div class="footerCenter">made by: FVKP</div>
+            <div class="footerRight"><a href="mailto:contact@Lego.com" class="footerContact-link">Contact</a></div>
         </footer>
         <?php
     }
