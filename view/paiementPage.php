@@ -20,6 +20,7 @@ include_once '../view/includes.php';
 
     <div class="backgroundBlur"></div>
     <div class="container">
+    <main>
         
         <!-- Section Address -->
         <div class="section">
@@ -103,7 +104,10 @@ include_once '../view/includes.php';
         
         <!-- Button to submit the form -->
         <button class="submit-btn">Submit Order</button>
+    
+    </main>
     </div>
+    
     <?php include_footer_client(); ?>
 </body>
 </html>

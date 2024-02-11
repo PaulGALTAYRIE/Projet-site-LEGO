@@ -34,10 +34,11 @@ include_once '../view/includes.php';
             <span>Remember me</span><br><br>
             Forgot <a href="#">Password</a>
         </form>
-    </div>
 
     </main>
 
+    </div>
+    
     <?php include_footer_client(); ?>
 </body>
 </html>

@@ -16,7 +16,16 @@ include_once '../view/includes.php';
     <h1>Profil</h1>
     <?php include_header_client(); ?>
 
+    <div class="profil">
+    <main>
 
+
+
+
+
+
+    </main>
+    <div>
 
     <?php include_footer_client(); ?>
 </body>

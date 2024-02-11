@@ -18,6 +18,10 @@
   border-radius: 15px;
   border: solid 2px #000000;
   margin-bottom: 11%;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .login label {
   color: #000000;
@@ -78,6 +82,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+
 }
 .pack1 img{
   height: 150px;
@@ -203,6 +209,10 @@ a {
     margin: 20px auto;
     padding: 0 20px;
     z-index: 1;
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 .section {
     margin-bottom: 30px;
@@ -289,7 +299,13 @@ a {
   display: block; /* Cette ligne pour assurer le centrage */
 }
 
+/*Profil*/
 
+.profil {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
 /*Commun*/
 
@@ -308,13 +324,12 @@ body {
 
 }
 
-
 h1 {
   position: absolute;
   top: 3.5%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #474956;
+  color: black;
   z-index: 1;
 }
 
@@ -337,6 +352,8 @@ h1 {
   height: 100px; /* Hauteur de 100px */
   width: 100%; /* Prend toute la largeur de la page */
   z-index: 0;
+  padding: 0%;
+  margin:0;
 }
 #profilButton {
   position:absolute;
@@ -418,12 +435,33 @@ h1 {
 }
 
 .logo {
-  border-radius: 0%;
+  border-radius: 2%;
   position: absolute;
   top:0;
   left:0;
-  width: 100px;
-  height:100px;
+  width: 50px;
+  height:50px;
+  z-index: 1; /* Assurez-vous que le logo est au-dessus du bandeau */
+  padding: 0;
+  margin: 0; /* Ajoutez cette ligne pour réinitialiser la marge */
+}
+
+.logoButton {
+  border-radius: 2%;
+  position: absolute;
+  top:12.5px;
+  left:12.5px;
+  width: 75px;
+  height:75px;
+  z-index: 1; /* Assurez-vous que le logo est au-dessus du bandeau */
+  padding: 0;
+  margin: 0; /* Ajoutez cette ligne pour réinitialiser la marge */
+}
+
+.logoImage {
+  width: 100%; /* Utilisez la largeur à 100% pour occuper la totalité du bouton */
+  height: 100%; /* Utilisez la hauteur à 100% pour occuper la totalité du bouton */
+  border-radius: 0%; /* Vous pouvez ajuster cela en fonction de vos besoins */
 }
 
 /* footer */

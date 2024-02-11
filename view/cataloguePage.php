@@ -18,6 +18,7 @@ include_once '../view/includes.php';
     <main>
     <div class="backgroundBlur"></div>
     <div class="catalogue">
+
         <div class="pack1">
             <img src="../figs/brique 2x3 rouge.PNG" alt="Pièce LEGO rouge">
             <p>Brick 2x3 red</p>
@@ -118,8 +119,8 @@ include_once '../view/includes.php';
             <p>Brick 2x2 white</p>
             <p>Prix : $0.99</p>
         </div>
-    </div>
     </main>
+    </div>
 
     <?php include_footer_client(); ?>
 

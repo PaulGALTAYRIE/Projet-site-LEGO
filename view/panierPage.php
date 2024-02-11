@@ -36,9 +36,7 @@
             </div>
         </main>
 
+        <?php include_footer_client(); ?>
     </div>
-
 </body>
-<?php include_footer_client(); ?>
-
 </html>

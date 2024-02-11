@@ -7,8 +7,8 @@
             <!-- logo / redirection catalogue -->
             <div class="logo">
                 <form method="post" action="../Controllers/navOngletClient.php">
-                    <button type="submit" name="logoButton" class="logo">
-                        <img src="../figs/LegoLogo.png" alt="Logo" width="75" height="75" class="logo">
+                    <button type="submit" name="logoButton" class="logoButton">
+                        <img src="../figs/LegoLogo.png" alt="Logo" width="75" height="75" class="logoImage">
                     </button>
                 </form>
             </div>
