@@ -24,21 +24,21 @@
                 $_SESSION['country'] = $_POST['country'];
                 $_SESSION['adress'] = $_POST['adress'];
                 $_SESSION['code_postal'] = $_POST['code_postal'];
-                if ($_POST['userType'] == admin){
+                $_SESSION['specification'] = $_POST['specification'];
+
+                if ($_POST['userType'] == "admin"){
                     $_SESSION['statut'] = 1;
                 }
                 else{
                     $_SESSION['statut'] = 0;
                 }
             }
-
-            create_user($_POST['name'], $_POST['mdp'], $_POST['email'], $_POST['number'], $_POST['country'], $_POST['adress'], $_POST['code_postal'], $_POST['statut']);
+            $userModel->create_user($_POST['name'], $_POST['mdp'], $_POST['email'], $_POST['number'], $_POST['country'], $_POST['adress'], $_POST['code_postal'], $_SESSION['statut'], $_POST['specification']);
         }
         else {
 
-            $something_to_say = "Missing login and/or password";
+            $something_to_say = "Missing Informations";
         }
-        
     }
 
     

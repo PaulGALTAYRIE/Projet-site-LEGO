@@ -19,3 +19,8 @@ if (isset($_POST['profilButton'])) {
     header("Location: /view/ProfilPage.php");
     exit();
 }
+
+if (isset($_POST['newAccountButton'])) {
+    header("Location: /view/nouveauComptePage.php");
+    exit();
+}

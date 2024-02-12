@@ -335,7 +335,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(BackgroundLego.jpg);
+  background-image: "../figs/BackgroundLego.PNG";
   background-size: cover;
   background-position: center;
   filter: blur(3px); /* Appliquer le flou à l'image de fond */

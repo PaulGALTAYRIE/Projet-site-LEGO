@@ -41,20 +41,15 @@ include_once '../view/includes.php';
             <input type="int" name="code_postal" id="code_postal" placeholder="code_postal"><br><br>
             <label><b>Specification</b></label><br>   
             <input type="text" name="specification" id="specification" placeholder="specification"><br><br>
-
-
             <div class="section">
             <h2>Statut</h2>
-            <form>
                 <label>
                 <input type="radio" name="userType" value="admin"> Administrateur
                 </label>
                 <label>
                 <input type="radio" name="userType" value="client"> Client
                 </label>
-            </form>
-        </div>
-
+             </div>
             <button type="submit">Submit</button>
             <br><br>
             <input type="checkbox" id="check">
@@ -62,7 +57,6 @@ include_once '../view/includes.php';
             Forgot <a href="#">Password</a>
 
         </form>
-
     </main>
 
     </div>

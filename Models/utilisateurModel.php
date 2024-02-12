@@ -30,9 +30,9 @@ class UserModel extends DBModel {
         return $result;
     }
 
-    function create_user(string $name, string $mdp, string $email, int $number, string $coutry, string $adress, int $code_postal, string $statut ){
-        $request = "INSERT INTO utilisateur(name, mdp, email, number, country, adresse, code_postal, statut) VALUES (:name, :mdp, :email, :number, :country, :adresse, :code_postal, :statut)";
-        $statement = $db->prepare($request);
+    function create_user(string $name, string $mdp, string $email, int $number, string $country, string $adress, int $code_postal, int $statut, string $specification){
+        $request = "INSERT INTO utilisateur(name, mdp, email, number, country, adresse, code_postal, statut, specification) VALUES (:name, :mdp, :email, :number, :country, :adresse, :code_postal, :statut, :specification)";
+        $statement = $this->db->prepare($request);
         $statement->execute(
             [
                 "name" => $name,
@@ -43,6 +43,7 @@ class UserModel extends DBModel {
                 "adresse" => $adress,
                 "code_postal" => $code_postal,
                 "statut" => $statut,
+                "specification" => $specification,
             ]
             );
     }

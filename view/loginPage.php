@@ -34,7 +34,10 @@ include_once '../view/includes.php';
             <span>Remember me</span><br><br>
             Forgot <a href="#">Password</a>
         </form>
-
+        <h2>Créer un nouveau compte</h2>
+        <form method="post" action="../Controllers/navOngletClient.php">
+            <button type="submit" name="newAccountButton" id="newAccount" placeholder="newAccount">Nouveau compte</button>
+        </form>
     </main>
 
     </div>
