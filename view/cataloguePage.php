@@ -19,31 +19,13 @@ include_once '../view/includes.php';
     <div class="backgroundBlur"></div>
     <div class="catalogue">
 
-        <div class="pack1">
-            <img src="../figs/brique 2x3 rouge.PNG" alt="Pièce LEGO rouge">
-            <p>Brick 2x3 red</p>
-            <p>Prix : $1.99</p>
-        </div>
-        <div class="pack1">
-            <img src="../figs/brique 2x3 bleue.PNG" alt="Pièce LEGO bleue">
-            <p>Brick 2x3 blue</p>
-            <p>Prix : $1.99</p>
-        </div>
-        <div class="pack1">
-            <img src="../figs/brique 2x3 verte.PNG" alt="Pièce LEGO verte">
-            <p>Brick 2x3 green</p>
-            <p>Prix : $1.99</p>
-        </div>
-        <div class="pack1">
-            <img src="../figs/brique 2x3 jaune.PNG" alt="Pièce LEGO jaune">
-            <p>Brick 2x3 yellow</p>
-            <p>Prix : $1.99</p>
-        </div>
-        <div class="pack1">
-            <img src="../figs/brique 2x3 orange.PNG" alt="Pièce LEGO orange">
-            <p>Brick 2x3 orange</p>
-            <p>Prix : $1.99</p>
-        </div>
+    <div class="pack1">
+    <img src="../figs/brique 2x3 rouge.PNG" alt="Pièce LEGO rouge">
+    <p>Brick 2x3 red</p>
+    <p>Prix : $1.99</p>
+    <a href="../Controllers/ajouterAuPanier.php?id_produit=1">Ajouter au panier</a>
+</div>
+
         <div class="pack2">
             <img src="../figs/brique 2x3 noire.PNG" alt="Pièce LEGO noire">
             <p>Brick 2x3 black</p>
