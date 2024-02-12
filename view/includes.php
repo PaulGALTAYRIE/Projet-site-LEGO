@@ -54,7 +54,50 @@
 
 
     function include_error_message($message) {
+        ?>
         echo "<p class='error_message'>" . $message . "</p>";
+        <?php
     }
+  
     
-?>
+    function include_header_admin(){
+        ?>
+        <header>
+        <div class="bandeaubleu"></div>
+            <!-- logo / redirection catalogue -->
+            <div class="logo">
+                <form method="post" action="../Controllers/navOngletAdmin.php">
+                    <button type="submit" name="logoButton" class="logoButton">
+                        <img src="../figs/LegoLogo.png" alt="Logo" width="75" height="75" class="logoImage">
+                    </button>
+                </form>
+            </div>
+
+            <!-- redirection profil -->
+            <form method="post" action="../Controllers/navOngletAdmin.php">
+                <button type="submit" name="profilButton" id="profil" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+                    <img src="../figs/Profil.png" alt="Image de profil" id="profilImage">
+                </button>
+            </form>    
+            
+            <!--like-->
+            <button id="likeButton">Like</button>
+            <img src="../figs/Like.JPG" alt="Image de like" id="likeImage">
+
+            <!-- redirection Panier -->
+            <form method="post" action="../Controllers/navOngletAdmin.php">
+                <button type="submit" name="stockButton" id="stock" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+                    <img src="../figs/camion.JPG" alt="Image du panier" id="panierImage">
+                </button>
+            </form>
+
+            <!-- logout -->
+            <form id=logout method="post" action="../Controllers/loginController.php">
+                <button type="submit" name="logoutButton" id="logout" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+                    <img src="../figs/logout.PNG" alt="Image du logout" id="logoutImage">
+                </button><br><br>
+            </form>
+        </header>
+        <?php
+        
+    }

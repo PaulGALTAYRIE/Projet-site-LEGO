@@ -8,6 +8,7 @@
 </head>
 <body id="catalogue">
     <h1>Administrateur</h1>
+    <?php include_header_Admin(); ?>
     <div class="bandeau"></div>
 
     <button id="profilButton">Profil</button>
@@ -15,21 +16,12 @@
 
 
     <form method="post" action="../Controllers/navOngletClient.php">
-        <label><b>panierImage</b></label><br>
-        <button type="submit" name="panierButton" id="panier" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
-            <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">
+        <label><b>StockImage</b></label><br>
+        <button type="submit" name="StockButton" id="panier" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+            <img src="../figs/Camion.JPG" alt="Image du camion" id="StockImage">
         </button><br><br>
     </form>
-<!--
-    <button id="panierButton">Panier</button>
-    <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">
--->
-
-    <button id="likeButton">Like</button>
-    <img src="../figs/Like.JPG" alt="Image de like" id="likeImage">
-
-
-
+<!-- <button id="panierButton">Panier</button> <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">-->
     <div class="logo">
         <form method="post" action="../Controllers/navOngletClient.php">
             <button type="submit" name="logoButton" class="logo">
