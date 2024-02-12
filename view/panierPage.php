@@ -3,6 +3,18 @@ session_start();
 
 include_once '../view/includes.php'; // Inclure les fichiers communs si nécessaire
 
+// Connexion à la base de données
+$servername = "localhost";
+$username = "tai_frog";
+$password = "A6495AVLXR";
+$dbname = "lego_web_site";
+
+$connexion = new mysqli($servername, $username, $password, $dbname);
+
+if ($connexion->connect_error) {
+    die("Échec de la connexion : " . $connexion->connect_error);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -24,28 +36,28 @@ include_once '../view/includes.php'; // Inclure les fichiers communs si nécessa
                 <?php
                 // Vérifier si le panier existe dans la session et s'il n'est pas vide
                 if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
-                    // Connectez-vous à votre base de données ou incluez votre configuration de connexion
-
-                    // Parcourez chaque produit dans le panier
                     foreach ($_SESSION['panier'] as $id_produit => $quantite) {
-                        // Récupérez les informations sur le produit depuis la base de données
-                        // Remplacez "votre_table_produits" par le nom de votre table
-                        $query = "SELECT * FROM votre_table_produits WHERE id_produit = $id_produit";
-                        // Exécutez la requête et récupérez les données du produit
-                        // Ici, vous obtiendrez une ligne de données qui contient toutes les informations sur le produit
-                        // Vous pouvez ensuite utiliser ces informations pour afficher le produit dans votre panier
-                        // Supposons que vous ayez des colonnes nom_produit, description, prix, etc.
+                        // Récupérer les informations sur le produit depuis la base de données
+                        $sql = "SELECT * FROM piece WHERE id = $id_produit";
+                        $resultat = $connexion->query($sql);
 
-                        // Afficher chaque produit dans le panier
-                        echo "<div class='item'>";
-                        echo "<img src='image_produit.jpg' alt='Product Image'>";
-                        echo "<div class='item-details'>";
-                        echo "<h2>Nom du produit</h2>";
-                        echo "<p>Description du produit.</p>";
-                        echo "<p>Prix: $10.00</p>"; // Remplacez par le prix réel du produit
-                        echo "</div>";
-                        echo "<button class='remove-btn'>Supprimer</button>";
-                        echo "</div>";
+                        if ($resultat->num_rows > 0) {
+                            // Afficher chaque produit dans le panier avec les informations réelles
+                            while ($row = $resultat->fetch_assoc()) {
+                                echo "<div class='item'>";
+                                echo "<img src='image_produit.jpg' alt='Product Image'>";
+                                echo "<div class='item-details'>";
+                                echo "<h2>" . $row['nom'] . "</h2>";
+                                echo "<p>Prix: $" . $row['prix'] . "</p>";
+                                echo "</div>";
+                                // Formulaire de suppression pour chaque produit
+                                echo "<form method='post' action='../Controllers/supprimerDuPanier.php'>";
+                                echo "<input type='hidden' name='id_produit' value='$id_produit'>";
+                                echo "<button type='submit' class='remove-btn'>Supprimer</button>";
+                                echo "</form>";
+                                echo "</div>";
+                            }
+                        }
                     }
                 } else {
                     // Si le panier est vide, affichez un message indiquant que le panier est vide
@@ -68,3 +80,7 @@ include_once '../view/includes.php'; // Inclure les fichiers communs si nécessa
     </div>
 </body>
 </html>
+
+<?php
+$connexion->close(); // Fermer la connexion à la base de données
+?>
