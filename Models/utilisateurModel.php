@@ -31,12 +31,20 @@ class UserModel extends DBModel {
     }
 
     function create_user(string $name, string $mdp, string $email, int $number, string $coutry, string $adress, int $code_postal, string $statut ){
-        $request = "IMPORT "
-
-
-
-
+        $request = "INSERT INTO utilisateur(name, mdp, email, number, country, adresse, code_postal, statut) VALUES (:name, :mdp, :email, :number, :country, :adresse, :code_postal, :statut)";
+        $statement = $db->prepare($request);
+        $statement->execute(
+            [
+                "name" => $name,
+                "mdp" => $mdp,
+                "email" => $email,
+                "number" => $number,
+                "country" => $country,
+                "adresse" => $adress,
+                "code_postal" => $code_postal,
+                "statut" => $statut,
+            ]
+            );
     }
-
 }
 
