@@ -20,9 +20,11 @@
                 </button>
             </form>    
             
-            <!--like-->
+            
+            <!--like
             <button id="likeButton">Like</button>
             <img src="../figs/Like.JPG" alt="Image de like" id="likeImage">
+            -->
 
             <!-- redirection Panier -->
             <form method="post" action="../Controllers/navOngletClient.php">
