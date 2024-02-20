@@ -15,7 +15,7 @@ class UserModel extends DBModel {
         }
         */
 
-        $request = "SELECT name, mdp, statut FROM utilisateur WHERE name=:name AND mdp=:mdp";
+        $request = "SELECT id, name, mdp, statut FROM utilisateur WHERE name=:name AND mdp=:mdp";
         $statement = $this->db->prepare($request);
         $statement->execute([
             "name" => $name,
@@ -23,6 +23,7 @@ class UserModel extends DBModel {
         ]);
         $entries = $statement->fetchAll();
         if (count($entries) == 1) {
+            $result["id"] = $entries[0]['id'];
             $result["name"] = $entries[0]['name'];
             $result["mdp"] = $entries[0]['mdp'];
             $result["statut"] = $entries[0]['statut'];

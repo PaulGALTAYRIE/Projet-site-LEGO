@@ -22,6 +22,13 @@ $pieceModel = new PieceModel();
     <div class="backgroundBlur"></div>
     <div class="catalogue">
 
+    <?php 
+            // if an error happened
+            if (isset($something_to_say)) {
+                print_r($something_to_say);
+            }
+        ?>
+
         <div class="pack1">
             <img src="../figs/brique 2x3 rouge.PNG" alt="Pièce LEGO rouge">
             <p>Brick 2x3 red</p>
@@ -30,6 +37,11 @@ $pieceModel = new PieceModel();
                 echo("<p>Quantity = $result[quantity]</p>");
                 echo("<p>Price = $result[price] €</p>");
             ?>
+            <form method="post" action="../Controllers/addPiece.php">
+            <input type="hidden" name="product_type" value="Brick 2x3 red">
+            <input type="int" name="quantity" id="quantity" placeholder="quantity"><br><br>
+            <button type="submit" name="ajoutAchatButton" id="ajoutAchat" placeholder="ajoutAchat">Ajouter</button>
+            </form>
         </div>
 
         <div class="pack1">

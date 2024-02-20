@@ -16,6 +16,7 @@
                 $_SESSION['name'] = $result['name'];
                 $_SESSION['mdp'] = $result['mdp'];
                 $_SESSION['statut'] = $result['statut'];
+                $_SESSION['id'] = $result['id'];
             }
             else {
 
