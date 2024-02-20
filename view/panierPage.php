@@ -68,7 +68,10 @@ require_once("../Models/utilisateurModel.php");
                 echo "<p>Price: {$piecePrice} €</p>";
                 echo "<p>Quantity: $quantity</p>";
                 echo "</div>";
-                echo "<button class='remove-btn'>Remove</button>";
+                echo "<form method='post' action='../Controllers/panierController.php'>";
+                echo "<input type='hidden' name='ordre' value='{$article['id']}'>";
+                echo "<button type='submit' name='remove_btn' class='remove_btn' placeholder='remove_btn'>Remove</button>";
+                echo "</form>";
                 echo "</div>";
                 echo "</div>";
             }

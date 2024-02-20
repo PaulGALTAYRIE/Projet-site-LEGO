@@ -36,5 +36,14 @@ class OrdreModel extends DBmodel {
         
         return $result;
     }
+
+    function remove_ordre(int $id_ordre) {
+
+        $request = "DELETE FROM ordre WHERE id = :id_ordre";
+        $statement = $this->db->prepare($request);
+        $statement->execute([
+            "id_ordre" => $id_ordre,
+        ]);
+    }
 }
 
