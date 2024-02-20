@@ -31,7 +31,7 @@ include_once '../view/includes.php';
 
             <label><b>Email</b></label><br>
             <input type="text" name="email" id="email" placeholder="email"><br><br>
-            <label><b><Nav></Nav>umber</b></label><br>            
+            <label><b><Nav></Nav>Number</b></label><br>            
             <input type="int" name="number" id="number" placeholder="number"><br><br>
             <label><b>Country</b></label><br>
             <input type="text" name="country" id="country" placeholder="country"><br><br>

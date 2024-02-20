@@ -1,7 +1,7 @@
 <?php
 
 require_once("../Models/ordreModel.php");
-require_once("../Models/CommandeModel.php");
+require_once("../Models/commandeModel.php");
 require_once("../Models/pieceModel.php");
 
 require_once("../Models/DBModel.php");
@@ -14,6 +14,11 @@ $statut = 0; // 0 signifie que la commande n'a pas encore été effectué
 
 session_start();
 
+    if (!isset($_SESSION['id'])){
+        $something_to_say = "Connectez-vous";
+        require_once("../view/cataloguePage.php");
+        exit();
+    }
     if (!isset($_SESSION["commande_create"])) {
         $id_livreur = 1; // 1 signifie que le mode de livraion n'a pas encore été spécifié
         $commandeModel->create_commande($_SESSION['id'], $id_livreur, $statut);
