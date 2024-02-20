@@ -1,17 +1,9 @@
 <?php
-    /**
-     * Example of a simple controller
-     * It will call the model to get the data
-     * and then decide which view to display (login form or welcome page)
-     * 
-     * @author: p.reuter
-     * @date: Dec. 2023
-     */
 
-    
-    // do all necessary includes first
-    // __DIR__ allows you to use relative paths explicitly
+    /* test model utilisateut */
+
     require_once("../Models/utilisateurModel.php");
+
 
     $userModel = new UserModel();
 
@@ -43,5 +35,18 @@
     $statut = "1";
     
     $result = $userModel->check_login($name, $mdp);
+    print_r($result);
+
+
+
+    /* test piece model */
+
+    require_once("../Models/pieceModel.php");
+
+    $pieceModel = new PieceModel();
+
+    $name = "Brick 2x3 blue";
+
+    $result = $pieceModel->get_quantity_price($name);
     print_r($result);
 
