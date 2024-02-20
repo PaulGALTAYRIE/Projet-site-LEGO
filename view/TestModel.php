@@ -1,10 +1,9 @@
 <?php
-
     /* test model utilisateut */
 
     require_once("../Models/utilisateurModel.php");
 
-
+    /*
     $userModel = new UserModel();
 
     $name = "Dieu";
@@ -40,7 +39,7 @@
 
 
     /* test piece model */
-
+    /*
     require_once("../Models/pieceModel.php");
 
     $pieceModel = new PieceModel();
@@ -49,4 +48,31 @@
 
     $result = $pieceModel->get_quantity_price($name);
     print_r($result);
+
+    
+
+    /* test ordre model */
+    /*
+
+    require_once("../Models/ordreModel.php");
+
+    $ordreModel = new OrdreModel();
+
+    $id_commande = 5;
+
+    $result = $ordreModel->get_ordre($id_commande);
+    print_r($result);
+
+    /* test commande model */
+
+    require_once("../Models/commandeModel.php");
+
+    $commandeModel = new CommandeModel();
+
+    $id_utilisateur = 7;
+    $statut = 0;
+
+    $result = $commandeModel->get_commande($id_utilisateur, $statut);
+    print_r($result);
+
 

@@ -4,7 +4,7 @@ require_once("DBModel.php");
 
 class OrdreModel extends DBmodel {
 
-    function create_order(int $id_commande, int $id_piece, int $quantity) {
+    function create_ordre(int $id_commande, int $id_piece, int $quantity) {
 
         $request = "INSERT INTO ordre(id_commande, id_piece, quantity) VALUES (:id_commande, :id_piece, :quantity)";
         $statement = $this->db->prepare($request);
@@ -17,6 +17,24 @@ class OrdreModel extends DBmodel {
             );
     }
 
-}
+    function get_ordre(int $id_commande) {
+        $result = [];
 
+        $request = "SELECT id, id_piece, quantity FROM ordre WHERE id_commande = :id_commande";
+        $statement = $this->db->prepare($request);
+        $statement->execute(["id_commande" => $id_commande]);  // Correction ici
+    
+        $entries = $statement->fetchAll();
+        
+        foreach ($entries as $entry) {
+            $result[] = [
+                "id" => $entry['id'],
+                "id_piece" => $entry['id_piece'],
+                "quantity" => $entry['quantity']
+            ];
+        }
+        
+        return $result;
+    }
+}
 

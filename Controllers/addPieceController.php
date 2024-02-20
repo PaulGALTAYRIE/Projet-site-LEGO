@@ -26,7 +26,10 @@ session_start();
     }
 
     $result = $commandeModel->get_commande($_SESSION['id'], $statut);
-    $id_commande = $result['id'];
+    $firstCommande = reset($result);
+    $id_commande = $firstCommande['id'];
+
+
     $result = $pieceModel->get_quantity_price("Brick 2x3 red");
     $stock = $result['quantity'];
     $result = $pieceModel->get_id_piece($_POST["product_type"]);
@@ -36,7 +39,7 @@ session_start();
 
             if ($_POST["quantity"]>0){
                 if ($stock >= $_POST["quantity"]) {
-                    $ordreModel->create_order($id_commande, $id_piece, $_POST["quantity"]);
+                    $ordreModel->create_ordre($id_commande, $id_piece, $_POST["quantity"]);
                     $pieceModel->remove_piece($_POST["quantity"], $_POST["product_type"]);
                     require_once("../view/cataloguePage.php");
                     exit();

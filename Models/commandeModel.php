@@ -27,10 +27,12 @@ class CommandeModel extends DBmodel {
             "id_utilisateur" => $id_utilisateur,
             "statut"=> $statut
         ]);
-        $entry = $statement->fetch(PDO::FETCH_ASSOC);
+        $entries = $statement->fetchAll();
 
-        if ($entry) {
-            $result["id"] = $entry['id'];
+        foreach ($entries as $entry) {
+            $result[] = [
+            "id" => $entry['id'],
+            ];
         }
     
         return $result;

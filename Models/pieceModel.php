@@ -21,6 +21,72 @@ class PieceModel extends DBmodel {
         }
         return $result;
     }
+
+    function get_name(string $id) {
+
+        $result = [];
+
+        $request = "SELECT name FROM piece WHERE id=:id";
+        $statement = $this->db->prepare($request);
+        $statement->execute([
+            "id" => $id,
+        ]);
+        $entries = $statement->fetchAll();
+        if (count($entries) == 1) {
+            $result["name"] = $entries[0]['name'];
+        }
+        return $result;
+    }
+
+    function get_format(string $id) {
+
+        $result = [];
+
+        $request = "SELECT format FROM piece WHERE id=:id";
+        $statement = $this->db->prepare($request);
+        $statement->execute([
+            "id" => $id,
+        ]);
+        $entries = $statement->fetchAll();
+        if (count($entries) == 1) {
+            $result["format"] = $entries[0]['format'];
+        }
+        return $result;
+    }
+
+    function get_color(string $id) {
+
+        $result = [];
+
+        $request = "SELECT color FROM piece WHERE id=:id";
+        $statement = $this->db->prepare($request);
+        $statement->execute([
+            "id" => $id,
+        ]);
+        $entries = $statement->fetchAll();
+        if (count($entries) == 1) {
+            $result["color"] = $entries[0]['color'];
+        }
+        return $result;
+    }
+
+    function get_price(string $id) {
+
+        $result = [];
+
+        $request = "SELECT price FROM piece WHERE id=:id";
+        $statement = $this->db->prepare($request);
+        $statement->execute([
+            "id" => $id,
+        ]);
+        $entries = $statement->fetchAll();
+        if (count($entries) == 1) {
+            $result["price"] = $entries[0]['price'];
+        }
+        return $result;
+    }
+
+
     function remove_piece(int $quantity, string $name) {
 
         $request = "UPDATE piece SET quantity = quantity - :quantity WHERE name = :name";
