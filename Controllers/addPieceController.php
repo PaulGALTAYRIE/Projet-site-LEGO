@@ -27,14 +27,28 @@ session_start();
     $result = $pieceModel->get_id_piece($_POST["product_type"]);
     $id_piece = $result['id'];
 
-        if ($stock >= $_POST["quantity"]) {
-            $ordreModel->create_order($id_commande, $id_piece, $_POST["quantity"]);
-            $pieceModel->remove_piece($_POST["quantity"], $_POST["product_type"]);
-            require_once("../view/cataloguePage.php");
-            exit();
+        if (is_numeric($_POST["quantity"])){
+
+            if ($_POST["quantity"]>0){
+                if ($stock >= $_POST["quantity"]) {
+                    $ordreModel->create_order($id_commande, $id_piece, $_POST["quantity"]);
+                    $pieceModel->remove_piece($_POST["quantity"], $_POST["product_type"]);
+                    require_once("../view/cataloguePage.php");
+                    exit();
+                }
+                else{
+                    $something_to_say = "Not enough sotcks !";
+                    require_once("../view/cataloguePage.php");
+                }
+            }
+            else{
+                $something_to_say = "You can't enter a negative number !";
+                require_once("../view/cataloguePage.php");
+            }
         }
         else {
-            $something_to_say = "Not enough sotcks !";
+            $something_to_say = "Enter a number !";
             require_once("../view/cataloguePage.php");
         }
+?>
 

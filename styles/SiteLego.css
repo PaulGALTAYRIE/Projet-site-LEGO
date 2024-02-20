@@ -178,6 +178,31 @@ a {
   background-color: #ffffff;
 }
 
+.ajoutAchat {
+  background-color: #ffffff; /* Couleur de fond blanche */
+  color: #000000; /* Couleur du texte noire */
+  padding: 10px 20px; /* Espacement intérieur du bouton */
+  border: 2px solid #ffcf00; /* Bordure solide de couleur jaune */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur de souris au survol */
+  transition: background-color 0.3s, color 0.3s; /* Transition pour un effet visuel */
+  margin-bottom: 20px; /* Ajout de la marge en dessous du bouton */
+}
+
+.ajoutAchat:hover {
+  background-color: #ffcf00; /* Changement de couleur au survol */
+  color: #ffffff; /* Changement de couleur du texte au survol */
+  border: 2px solid #ffffff; /* Changement de couleur de la bordure au survol */
+}
+
+#quantity {
+  width: 143px; /* Ajustez la largeur du champ de texte */
+}
+
+.ajoutAchat {
+  width: 150px; /* Ajustez la largeur du bouton pour correspondre au champ de texte */
+  /* ... (autres styles) ... */
+}
 
 /*Validation de paiement*/
 .delivery-option img {
