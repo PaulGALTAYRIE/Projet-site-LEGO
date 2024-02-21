@@ -328,6 +328,19 @@ a {
 
 /*Commun*/
 
+.something_to_say{
+  margin-top : 100px;
+  text-align: center;
+  font-weight: bold;
+  color: red;
+  border: 2px solid black; /* Ajoutez le style de bordure souhaité */
+  padding: 10px;
+  border-radius: 10px; /* Ajoutez une valeur pour spécifier le rayon des coins arrondis */
+}
+
+
+
+
 main {
   flex: 1;
   margin-bottom: 20px; /* Ajouter un espace entre le contenu principal et le footer */

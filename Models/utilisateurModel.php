@@ -8,13 +8,6 @@ class UserModel extends DBModel {
     function check_login(string $name, string $mdp) {
         $result = [];
         
-        /*
-        if (!$this->connected) {
-
-            return $result;
-        }
-        */
-
         $request = "SELECT id, name, mdp, statut FROM utilisateur WHERE name=:name AND mdp=:mdp";
         $statement = $this->db->prepare($request);
         $statement->execute([
@@ -46,7 +39,23 @@ class UserModel extends DBModel {
                 "statut" => $statut,
                 "specification" => $specification,
             ]
-            );
+        );
+    }
+    function update_user(int $id, string $name, string $email, int $number, string $country, string $adress, int $code_postal, string $specification){
+        $request = "UPDATE utilisateur SET name = :name, email = :email, number = :number, country = :country, adresse = :adresse, code_postal = :code_postal, specification = :specification WHERE id = :id";
+        $statement = $this->db->prepare($request);
+        $statement->execute(
+            [
+                "id" => $id,
+                "name" => $name,
+                "email" => $email,
+                "number" => $number,
+                "country" => $country,
+                "adresse" => $adress,
+                "code_postal" => $code_postal,
+                "specification" => $specification,
+            ]
+        );
     }
 }
 

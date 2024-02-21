@@ -37,4 +37,14 @@ class CommandeModel extends DBmodel {
     
         return $result;
     }
+
+    function update_commande(int $id, int $statut, int $id_livreur) {
+        $request = "UPDATE commande SET statut = :statut, id_livreur = :id_livreur WHERE id = :id";
+        $statement = $this->db->prepare($request);
+        $statement->execute([
+            "id" => $id,
+            "statut" => $statut,
+            "id_livreur" => $id_livreur,
+        ]);
+    }
 }

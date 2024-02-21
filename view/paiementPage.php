@@ -21,6 +21,15 @@ include_once '../view/includes.php';
     <div class="backgroundBlur"></div>
     <div class="container">
     <main>
+
+    <?php 
+            // if an error happened
+            if (isset($something_to_say)) {
+                echo "<div class='something_to_say'>";
+                echo "<h2> $something_to_say </h2>";
+                echo "</div>";
+            }
+        ?>
         
         <!-- Section Profil -->
         <div class="section">
@@ -49,7 +58,7 @@ include_once '../view/includes.php';
                 </div>
                 <div class="form-group">
                     <label for="postalCode">Postal Code:</label>
-                    <input type="text" id="postalCode" name="postalCode">
+                    <input type="int" id="postalCode" name="postalCode">
                 </div>
                 <div class="form-group">
                     <label for="country">Country:</label>
@@ -77,15 +86,15 @@ include_once '../view/includes.php';
                 </div>
                 <div class="form-group">
                     <label for="cardNumber">Card Number:</label>
-                    <input type="text" id="cardNumber" name="cardNumber">
+                    <input type="int" id="cardNumber" name="cardNumber">
                 </div>
                 <div class="form-group">
                     <label for="cardCVV">CVV:</label>
-                    <input type="text" id="cardCVV" name="cardCVV">
+                    <input type="int" id="cardCVV" name="cardCVV">
                 </div>
                 <div class="form-group">
                     <label for="cardExpiry">Expiry Date:</label>
-                    <input type="text" id="cardExpiry" name="cardExpiry">
+                    <input type="int" id="cardExpiry" name="cardExpiry">
                 </div>
         </div>
         
