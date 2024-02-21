@@ -57,5 +57,23 @@ class UserModel extends DBModel {
             ]
         );
     }
+    function get_user_by_id(int $id) {
+        $request = "SELECT name, email, number, country, adresse, code_postal, specification FROM utilisateur WHERE id = :id";
+        $statement = $this->db->prepare($request);
+        $statement->execute([
+            "id" => $id,
+        ]);
+        $entries = $statement->fetchAll();
+        if (count($entries) == 1) {
+            $result["name"] = $entries[0]['name'];
+            $result["email"] = $entries[0]['email'];
+            $result["number"] = $entries[0]['number'];
+            $result["country"] = $entries[0]['country'];
+            $result["adresse"] = $entries[0]['adresse'];
+            $result["code_postal"] = $entries[0]['code_postal'];
+            $result["specification"] = $entries[0]['specification'];
+        }
+        return $result;
+    }
 }
-
+?>
