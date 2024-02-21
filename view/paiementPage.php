@@ -22,89 +22,100 @@ include_once '../view/includes.php';
     <div class="container">
     <main>
         
+        <!-- Section Profil -->
+        <div class="section">
+            <h2>Profil</h2>
+            <form method="post" action="../Controllers/paiementController">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="number">Phone number:</label>
+                    <input type="text" id="number" name="number">
+                </div>
+        </div>
+
         <!-- Section Address -->
         <div class="section">
             <h2>Address</h2>
-            <form>
                 <div class="form-group">
-                    <label for="address-number">Number:</label>
-                    <input type="text" id="address-number" name="address-number">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address">
                 </div>
                 <div class="form-group">
-                    <label for="address-line">Address:</label>
-                    <input type="text" id="address-line" name="address-line">
-                </div>
-                <div class="form-group">
-                    <label for="address-spec">Specification:</label>
-                    <input type="text" id="address-spec" name="address-spec">
-                </div>
-                <div class="form-group">
-                    <label for="postal-code">Postal Code:</label>
-                    <input type="text" id="postal-code" name="postal-code">
+                    <label for="postalCode">Postal Code:</label>
+                    <input type="text" id="postalCode" name="postalCode">
                 </div>
                 <div class="form-group">
                     <label for="country">Country:</label>
                     <input type="text" id="country" name="country">
                 </div>
-            </form>
+                <div class="form-group">
+                    <label for="specification">Specification:</label>
+                    <input type="text" id="specification" name="specification">
+                </div>
         </div>
         
         <!-- Section Buy -->
         <div class="section">
             <h2>Buy</h2>
-            <form>
                 <div class="form-group">
-                    <label for="card-type">Type of Card:</label>
-                    <select id="card-type" name="card-type">
+                    <label for="cardType">Type of Card:</label>
+                    <select id="cardType" name="cardType">
                         <option value="mastercard">Mastercard</option>
                         <option value="visa">Visa</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="card-number">Card Number:</label>
-                    <input type="text" id="card-number" name="card-number">
+                    <label for="cardName">Name on Card:</label>
+                    <input type="text" id="cardName" name="cardName">
                 </div>
                 <div class="form-group">
-                    <label for="card-name">Name on Card:</label>
-                    <input type="text" id="card-name" name="card-name">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" name="cardNumber">
                 </div>
                 <div class="form-group">
-                    <label for="card-cvv">CVV:</label>
-                    <input type="text" id="card-cvv" name="card-cvv">
+                    <label for="cardCVV">CVV:</label>
+                    <input type="text" id="cardCVV" name="cardCVV">
                 </div>
                 <div class="form-group">
-                    <label for="card-expiry">Expiry Date:</label>
-                    <input type="text" id="card-expiry" name="card-expiry">
+                    <label for="cardExpiry">Expiry Date:</label>
+                    <input type="text" id="cardExpiry" name="cardExpiry">
                 </div>
-            </form>
         </div>
         
         <!-- Section Delivery -->
         <div class="section">
             <h2>Delivery</h2>
-            <form>
                 <div class="form-group">
-                    <label for="delivery-method">Select Delivery Method:</label>
-                    <label for="delivery-post" class="delivery-option">
-                    <input type="radio" id="delivery-post" name="delivery-method" value="post">
-                    <label for="delivery-post">
+                    <label for="delivery" class="delivery-option">
+
+                    <input type="radio" name="delivery" value="post">
+                    <label for="delivery_post">
                     <img src="../figs/laposte.JPG" alt="logolaposte" id="logolaposte">
                     </label>
-                    <input type="radio" id="delivery-dhl" name="delivery-method" value="dhl">
-                    <label for="delivery-dhl">
+
+                    <input type="radio" name="delivery" value="dhl">
+                    <label for="delivery_dhl">
                     <img  src="../figs/Dhl.JPG" alt="logoDHL" id="logoDHL">
                     </label>
-                    <input type="radio" id="delivery-dpd" name="delivery-method" value="dpd">
-                    <label for="delivery-dpd">
+
+                    <input type="radio" name="delivery" value="dpd">
+                    <label for="delivery_dpd">
                     <img src="../figs/DPD.JPG" alt="logoDPD" id="logoDPD">
                     </label>
                 </div>
-            </form>
         </div>
         
         <!-- Button to submit the form -->
         <button class="submit-btn">Submit Order</button>
-    
+        </form>
+
     </main>
     </div>
     
