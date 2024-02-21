@@ -27,6 +27,8 @@ require_once("../Models/utilisateurModel.php");
 
     session_start();
 
+    $total_price = 0;
+    
     if (isset($_SESSION['id'])) {
         $userModel = new UserModel();
         $commandeModel = new CommandeModel();
@@ -34,8 +36,6 @@ require_once("../Models/utilisateurModel.php");
         $pieceModel = new PieceModel();
 
         $id_utilisateur = $_SESSION['id'];
-
-        $total_price = 0;
 
         // Récupérez les commandes en cours pour cet utilisateur
         $commandesEnCours = $commandeModel->get_commande($id_utilisateur, 0);

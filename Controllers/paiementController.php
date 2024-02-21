@@ -93,7 +93,7 @@ else {
         exit();
     }
     else{
-        $something_to_say = "Connect youtself !";
+        $something_to_say = "Connect yourself !";
         require_once("../view/paiementPage.php");
         exit();    
     }

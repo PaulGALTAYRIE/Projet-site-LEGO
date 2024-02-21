@@ -24,3 +24,8 @@ if (isset($_POST['newAccountButton'])) {
     header("Location: /view/nouveauComptePage.php");
     exit();
 }
+
+if (isset($_POST['change_button'])) {
+    header("Location: /view/changeInfoPage.php");
+    exit();
+}

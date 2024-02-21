@@ -351,6 +351,24 @@ a {
   margin-bottom: 20px; /* Ajout de marge en dessous du titre */
 }
 
+.change_button {
+  background-color: #ffffff; /* Couleur de fond blanche */
+  color: #000000; /* Couleur du texte noire */
+  padding: 10px 20px; /* Espacement intérieur du bouton */
+  border: 2px solid #ffcf00; /* Bordure solide de couleur jaune */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur de souris au survol */
+  transition: background-color 0.3s, color 0.3s; /* Transition pour un effet visuel */
+  margin: 20px auto; /* Ajout de la marge en dessous et centrage horizontal */
+  display: block; /* Assure que le bouton est affiché en tant que bloc pour utiliser la marge automatique */
+}
+
+
+.change_button:hover {
+  background-color: #ffcf00; /* Changement de couleur au survol */
+  color: #ffffff; /* Changement de couleur du texte au survol */
+  border: 2px solid #ffffff; /* Changement de couleur de la bordure au survol */
+}
 
 /*Commun*/
 

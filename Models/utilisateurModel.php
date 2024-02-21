@@ -57,6 +57,23 @@ class UserModel extends DBModel {
             ]
         );
     }
+    function update_user_change(int $id, string $name, string $mdp, string $email, int $number, string $country, string $adress, int $code_postal, string $specification){
+        $request = "UPDATE utilisateur SET name = :name, mdp = :mdp, email = :email, number = :number, country = :country, adresse = :adresse, code_postal = :code_postal, specification = :specification WHERE id = :id";
+        $statement = $this->db->prepare($request);
+        $statement->execute(
+            [
+                "id" => $id,
+                "name" => $name,
+                "mdp" => $mdp,
+                "email" => $email,
+                "number" => $number,
+                "country" => $country,
+                "adresse" => $adress,
+                "code_postal" => $code_postal,
+                "specification" => $specification,
+            ]
+        );
+    }
     function get_user_by_id(int $id) {
         $request = "SELECT name, email, number, country, adresse, code_postal, specification FROM utilisateur WHERE id = :id";
         $statement = $this->db->prepare($request);
