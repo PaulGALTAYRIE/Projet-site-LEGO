@@ -69,25 +69,34 @@ elseif(!isset($_POST['delivery']) || !strlen($_POST['delivery']) > 0){
 else {
     session_start();
 
-    $userModel = new UserModel();
-    $commandeModel = new CommandeModel();
-    $livreurModel = new LivreurModel();
+    if(isset($_SESSION['id'])){
+        $id = $_SESSION['id'];
 
-    $id = $_SESSION['id'];
-    $userModel->update_user($id, $_POST['name'], $_POST['email'], $_POST['number'], $_POST['country'], $_POST['address'], $_POST['postalCode'], $_POST['specification']);
 
-    $commandesEnCours = $commandeModel->get_commande($id, 0);
-    foreach ($commandesEnCours as $commande) {
-        $commande['statut'] = 1; //  signifie que la commande est passé et est en cours de validation.
-        
-        $id_livreur = $livreurModel->get_id($_POST['delivery']);
-        $commande['id_livreur'] = $id_livreur;
-
-        $commandeModel->update_commande($commande['id'], $commande['statut'], $commande['id_livreur']);
+        $userModel = new UserModel();
+        $commandeModel = new CommandeModel();
+        $livreurModel = new LivreurModel();
+    
+        $userModel->update_user($id, $_POST['name'], $_POST['email'], $_POST['number'], $_POST['country'], $_POST['address'], $_POST['postalCode'], $_POST['specification']);
+    
+        $commandesEnCours = $commandeModel->get_commande($id, 0);
+        foreach ($commandesEnCours as $commande) {
+            $commande['statut'] = 1; //  signifie que la commande est passé et est en cours de validation.
+            
+            $id_livreur = $livreurModel->get_id($_POST['delivery']);
+            $commande['id_livreur'] = $id_livreur;
+    
+            $commandeModel->update_commande($commande['id'], $commande['statut'], $commande['id_livreur']);
+        }
+    
+        header("Location: ../view/cataloguePage.php");
+        exit();
     }
-
-    header("Location: ../view/cataloguePage.php");
-    exit();
+    else{
+        $something_to_say = "Connect youtself !";
+        require_once("../view/paiementPage.php");
+        exit();    
+    }
 }
 
 ?>
