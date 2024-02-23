@@ -41,10 +41,10 @@
 
     if (isset($_SESSION['name'])) {
         if($_SESSION['statut'] == 0) {
-            require_once("../view/cataloguePage.php");
+            header("Location: ../view/cataloguePage.php");
         }
         if($_SESSION['statut'] == 1) {
-            require_once("../view/adminPage.php");
+            header("Location: ../view/stocksPage.php");
         }
     }
     

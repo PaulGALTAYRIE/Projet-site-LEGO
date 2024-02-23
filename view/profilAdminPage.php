@@ -51,7 +51,7 @@
             ?>
 
         </main>
-        <?php include_footer_client(); ?>
+        <?php include_footer_admin(); ?>
 
 </body>
 </html>

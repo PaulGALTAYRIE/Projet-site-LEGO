@@ -504,8 +504,8 @@ h1 {
 
 #catalogueButton {
   position: absolute;
-  top: 23px;
-  right: 235px;
+  top: 24px;
+  right: 225px;
   width: 60px;
   height: 50px;
   border-radius: 50%;
@@ -513,10 +513,21 @@ h1 {
 }
 
 #catalogueImage {
-  top: 24px;
+  top: 30px;
   right: 235px;
   width: 70px;
   height: 55px;
+}
+
+#catalogueButton figcaption {
+  position: absolute;
+  top: 43.5px;
+  right: 2px; /* Ajustez la position en fonction de votre mise en page */
+  width: 50px; /* Ajustez la taille du bouton */
+  height: 50px; /* Ajustez la taille du bouton */
+  font-size: 12px; /* Ajustez la taille de la police selon vos préférences */
+  text-align: center; /* Pour centrer le texte sous l'image */
+  margin-top: 5px; /* Ajustez la marge pour positionner le figcaption sous l'image */
 }
 
 #profilButton {
@@ -532,12 +543,23 @@ h1 {
 
 #profilImage {
   position:absolute;
-  top: 24px;
-  right: 160px; /* Ajustez la valeur en fonction de la taille de votre image */
+  top: 25px;
+  right: 153px; /* Ajustez la valeur en fonction de la taille de votre image */
   width: 50px; /* Ajustez la taille de l'image */
   height: 50px; /* Ajustez la taille de l'image */
   border-radius: 50%; /* Assurez-vous que l'image est ronde */
 }
+#profil figcaption {
+  position: absolute;
+  top: 67px;
+  right: 153px; /* Ajustez la position en fonction de votre mise en page */
+  width: 50px; /* Ajustez la taille du bouton */
+  height: 50px; /* Ajustez la taille du bouton */
+  font-size: 12px; /* Ajustez la taille de la police selon vos préférences */
+  text-align: center; /* Pour centrer le texte sous l'image */
+  margin-top: 5px; /* Ajustez la marge pour positionner le figcaption sous l'image */
+}
+
 #panierButton {
   position:absolute;
   top: 20px;
@@ -551,11 +573,22 @@ h1 {
 
 #panierImage {
   position:absolute;
-  top: 20px;
+  top: 18px;
   right: 90px; /* Ajustez la valeur en fonction de la taille de votre image */
   width: 50px; /* Ajustez la taille de l'image */
   height: 50px; /* Ajustez la taille de l'image */
   border-radius: 50%; /* Assurez-vous que l'image est ronde */
+}
+
+#panier figcaption {
+  position: absolute;
+  top: 66px;
+  right: 84px; /* Ajustez la position en fonction de votre mise en page */
+  width: 50px; /* Ajustez la taille du bouton */
+  height: 50px; /* Ajustez la taille du bouton */
+  font-size: 12px; /* Ajustez la taille de la police selon vos préférences */
+  text-align: center; /* Pour centrer le texte sous l'image */
+  margin-top: 5px; /* Ajustez la marge pour positionner le figcaption sous l'image */
 }
 
 #logoutButton {
@@ -577,6 +610,18 @@ h1 {
   height: 50px; /* Ajustez la taille de l'image */
   border-radius: 50%;
 }
+
+#logout figcaption {
+  position: absolute;
+  top: 65px;
+  right: 23px; /* Ajustez la position en fonction de votre mise en page */
+  width: 50px; /* Ajustez la taille du bouton */
+  height: 50px; /* Ajustez la taille du bouton */
+  font-size: 12px; /* Ajustez la taille de la police selon vos préférences */
+  text-align: center; /* Pour centrer le texte sous l'image */
+  margin-top: 5px; /* Ajustez la marge pour positionner le figcaption sous l'image */
+}
+
 
 /*
 #likeButton {
@@ -634,6 +679,15 @@ h1 {
 /* footer */
 
 footer {
+  background-color: #ffcf00;
+  color: black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin {
   background-color: #4000ff;
   color: black;
   padding: 10px;

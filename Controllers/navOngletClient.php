@@ -38,3 +38,25 @@ if (isset($_POST['change_button'])) {
     header("Location: /view/changeInfoPage.php");
     exit();
 }
+
+// admin
+
+if (isset($_POST['commandesButton'])) {
+    header("Location: /view/commandesPage.php");
+    exit();
+}
+
+if (isset($_POST['logoAdmin'])) {
+    header("Location: /view/stocksPage.php");
+    exit();
+}
+
+if (isset($_POST['profilAdminButton'])) {
+    header("Location: /view/profilAdminPage.php");
+    exit();
+}
+
+if (isset($_POST['stocksButton'])) {
+    header("Location: /view/stocksPage.php");
+    exit();
+}

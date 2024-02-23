@@ -38,7 +38,7 @@ $brickTypes = [
 <body id="catalogue">
 
     <h1>Catalogue</h1>
-    <?php include_header_client(); ?>
+    <?php include_header_admin(); ?>
 
     <main>
     <?php 
@@ -63,7 +63,7 @@ $brickTypes = [
                     <form method="post" action="../Controllers/addPieceController.php">
                         <input type="hidden" name="product_type" value="Brick <?php echo $brickType; ?>">
                         <input type="int" name="quantity" id="quantity" placeholder="quantity"><br><br>
-                        <button type="submit" name="ajoutAchatButton" class="ajoutAchat" placeholder="ajoutAchat">Add</button>
+                        <button type="submit" name="ajoutAchatButton" class="ajoutAchat" placeholder="ajoutAchat">Ajouter</button>
                     </form>
                 </div>
             <?php endforeach; ?>
@@ -71,7 +71,7 @@ $brickTypes = [
         </div>
     </main>
 
-    <?php include_footer_client(); ?>
+    <?php include_footer_admin(); ?>
 
 </body>
 </html>
