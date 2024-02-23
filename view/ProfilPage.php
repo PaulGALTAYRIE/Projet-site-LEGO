@@ -65,6 +65,7 @@
                     echo "<h2>$titre</h2>";
                     foreach ($commandes as $commande) {
                         $idCommande = $commande['id'];
+                        $total = $commande['total'];
                         
                         // Vérifie si la clé "id_livreur" existe dans le tableau $commande
                         $idLivreur = isset($commande['id_livreur']) ? $livreurModel->get_name($commande['id_livreur']) : "Non spécifié";
@@ -72,8 +73,7 @@
                         echo "<div class='user_info_container'>";
                         echo "<p>ID Commande: $idCommande</p>";
                         echo "<p>Nom Livreur: " . $idLivreur . "</p>";
-                        // ... (ajoutez d'autres informations de commande au besoin)
-
+                        echo "<p>Total: $total €";
 
                         echo "<form method='post' action='../Controllers/profilController.php'>";
                         echo "<button type='submit' name='downlaod_button' class='downlaod_button' placeholder='downlaod_button'>Download</button>";

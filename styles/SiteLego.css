@@ -45,7 +45,10 @@ button:hover {
   margin-top: 20px;
 }
 
-
+.form-group input[type="radio"] {
+  width: 20px; /* Ajustez la largeur des boutons radio selon vos besoins */
+  height: 20px; /* Ajustez la hauteur des boutons radio selon vos besoins */
+}
 
 /* Optional: Style for error messages */
 .error-message {
@@ -244,6 +247,7 @@ h2.new{
 .form-group input[type="checkbox"] {
   margin-right: 5px;
 }
+
 .container{
     max-width: 800px;
     margin: 20px auto;

@@ -86,7 +86,7 @@ else {
             $id_livreur = $livreurModel->get_id($_POST['delivery']);
             $commande['id_livreur'] = $id_livreur;
     
-            $commandeModel->update_commande($commande['id'], $commande['statut'], $commande['id_livreur']z);
+            $commandeModel->update_commande($commande['id'], $commande['statut'], $commande['id_livreur']);
         }
     
         header("Location: ../view/cataloguePage.php");

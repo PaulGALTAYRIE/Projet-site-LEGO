@@ -21,7 +21,7 @@ class CommandeModel extends DBmodel {
     function get_commande(int $id_utilisateur, int $statut) {
         $result = [];
     
-        $request = "SELECT id, id_livreur FROM commande WHERE id_utilisateur = :id_utilisateur AND statut = :statut";
+        $request = "SELECT id, id_livreur, total FROM commande WHERE id_utilisateur = :id_utilisateur AND statut = :statut";
         $statement = $this->db->prepare($request);
         $statement->execute([
             "id_utilisateur" => $id_utilisateur,
@@ -33,6 +33,7 @@ class CommandeModel extends DBmodel {
             $result[] = [
                 "id" => $entry['id'],
                 "id_livreur" => $entry['id_livreur'], // Ajoutez l'id du livreur dans le tableau résultat
+                "total" => $entry['total'], // Ajoutez l'id du livreur dans le tableau résultat
             ];
         }
     
