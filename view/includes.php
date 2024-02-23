@@ -8,7 +8,8 @@
             <div class="logo">
                 <form method="post" action="../Controllers/navOngletClient.php">
                     <button type="submit" name="logoButton" class="logoButton">
-                        <img src="../figs/LegoLogo.png" alt="Logo" width="75" height="75" class="logoImage">
+                        <img src="../figs/LegoLogo.png" alt="Logo" width="75" height="75" class="logoImage" id="logoImage">
+                        <figcaption class="client">Client</figcaption>
                     </button>
                 </form>
             </div>
@@ -68,19 +69,21 @@
         ?>
         <header>
             <div class="bandeauAdmin"></div>
-            <!-- logo / redirection commandes -->
+            <!-- logo / redirection commandes Admin -->
             <div class="logo">
                 <form method="post" action="../Controllers/navOngletClient.php">
                     <button type="submit" name="logoAdmin" class="logoButton">
                         <img src="../figs/LegoLogo.png" alt="Logo" width="75" height="75" class="logoImage">
+                        <figcaption class="adminLogo">Administrator</figcaption>
                     </button>
                 </form>
             </div>
 
-            <!-- redirection stocks -->
+            <!-- redirection stocks Admin -->
             <form method="post" action="../Controllers/navOngletClient.php">
-                <button type="submit" name="stocksButton" id="catalogueButton" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
-                        <img src="../figs/catalogueAdmin.png" alt="catalogue" id="catalogueImage">
+                <button type="submit" name="stocksButton" id="stocksButton" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+                        <img src="../figs/catalogueAdmin.png" alt="catalogue" id="stocksImage">
+                        <figcaption>Stocks</figcaption>
                     </button>
                 </form>
 
@@ -88,18 +91,21 @@
             <!-- redirection profil admin -->
             <form method="post" action="../Controllers/navOngletClient.php">
                 <button type="submit" name="profilAdminButton" id="profil" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
-                    <img src="../figs/ProfilAdmin.png" alt="Image de profil" id="profilImage">
+                    <img src="../figs/ProfilAdmin.png" alt="Image de profil" id="profilAdminImage">
+                    <figcaption>Profil</figcaption>
+
                 </button>
             </form>    
             
-            <!-- redirection commandes -->
+            <!-- redirection commandesAdmin -->
             <form method="post" action="../Controllers/navOngletClient.php">
-                <button type="submit" name="commandesButton" id="panier" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
-                    <img src="../figs/Colis.PNG" alt="Image du panier" id="panierImage">
+                <button type="submit" name="commandesAdminButton" id="panier" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+                    <img src="../figs/Colis.PNG" alt="Image du panier" id="commandesAdminImage">
+                    <figcaption>Orders</figcaption>
                 </button>
             </form>
 
-            <!-- logout -->
+            <!-- logoutAdmin -->
             <form id="logout" method="post" action="../Controllers/loginController.php">
                 <button type="submit" name="logoutButton" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
                     <img src="../figs/logoutAdmin.PNG" alt="Image du logout" id="logoutImage">

@@ -105,6 +105,15 @@ class PieceModel extends DBmodel {
             "name" => $name,
         ]);
     }
+    function update_quantity(int $quantity, string $name) {
+
+        $request = "UPDATE piece SET quantity = :quantity WHERE name = :name";
+        $statement = $this->db->prepare($request);
+        $statement->execute([
+            "quantity" => $quantity,
+            "name" => $name,
+        ]);
+    }
 
     function get_id_piece(string $name) {
         $result = [];

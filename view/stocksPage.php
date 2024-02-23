@@ -60,10 +60,10 @@ $brickTypes = [
                         echo("<p>Quantity = $result[quantity]</p>");
                         echo("<p>Price = $result[price] €</p>");
                     ?>
-                    <form method="post" action="../Controllers/addPieceController.php">
+                    <form method="post" action="../Controllers/stocksPageController.php">
                         <input type="hidden" name="product_type" value="Brick <?php echo $brickType; ?>">
                         <input type="int" name="quantity" id="quantity" placeholder="quantity"><br><br>
-                        <button type="submit" name="ajoutAchatButton" class="ajoutAchat" placeholder="ajoutAchat">Ajouter</button>
+                        <button type="submit" name="setStocksButton" class="setStocks" placeholder="setStocks">Set</button>
                     </form>
                 </div>
             <?php endforeach; ?>

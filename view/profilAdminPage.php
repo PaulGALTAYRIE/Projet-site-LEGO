@@ -40,7 +40,7 @@
                         echo "</div>";
 
                         echo "<form method='post' action='../Controllers/navOngletClient.php'>";
-                        echo "<button type='submit' name='change_button' class='change_button' placeholder='change_button'>Change informations</button>";
+                        echo "<button type='submit' name='change_button_admin' class='change_button_admin' placeholder='change_button'>Change informations</button>";
                         echo "</form>";
                 }
                 else{

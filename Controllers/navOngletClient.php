@@ -60,3 +60,8 @@ if (isset($_POST['stocksButton'])) {
     header("Location: /view/stocksPage.php");
     exit();
 }
+
+if (isset($_POST['change_button_admin'])) {
+    header("Location: /view/changeInfoAdminPage.php");
+    exit();
+}

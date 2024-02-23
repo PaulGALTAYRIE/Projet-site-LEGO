@@ -217,12 +217,31 @@ h2.new{
   border: 2px solid #ffffff; /* Changement de couleur de la bordure au survol */
 }
 
+.setStocks {
+  background-color: #ffffff; /* Couleur de fond blanche */
+  color: #4000ff; /* Couleur du texte bleue */
+  padding: 10px 20px; /* Espacement intérieur du bouton */
+  border: 2px solid #4000ff; /* Bordure solide de couleur bleue */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur de souris au survol */
+  transition: background-color 0.3s, color 0.3s; /* Transition pour un effet visuel */
+  margin-bottom: 20px; /* Ajout de la marge en dessous du bouton */
+  width: 143px;
+}
+
+.setStocks:hover {
+  background-color: #4000ff; /* Changement de couleur au survol */
+  color: #ffffff; /* Changement de couleur du texte au survol */
+  border: 2px solid #ffffff; /* Changement de couleur de la bordure au survol */
+}
+
+
 #quantity {
   width: 143px; /* Ajustez la largeur du champ de texte */
 }
 
 .ajoutAchat {
-  width: 150px; /* Ajustez la largeur du bouton pour correspondre au champ de texte */
+  width: 143px; /* Ajustez la largeur du bouton pour correspondre au champ de texte */
   /* ... (autres styles) ... */
 }
 
@@ -390,6 +409,24 @@ h2.new{
   border: 2px solid #ffffff; /* Changement de couleur de la bordure au survol */
 }
 
+.change_button_admin {
+  background-color: #ffffff; /* Couleur de fond bleue */
+  color: #000000; /* Couleur du texte blanc */
+  padding: 10px 20px; /* Espacement intérieur du bouton */
+  border: 2px solid #4000ff; /* Bordure solide de couleur jaune */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur de souris au survol */
+  transition: background-color 0.3s, color 0.3s; /* Transition pour un effet visuel */
+  margin: 20px auto; /* Ajout de la marge en dessous et centrage horizontal */
+  display: block; /* Assure que le bouton est affiché en tant que bloc pour utiliser la marge automatique */
+}
+
+.change_button_admin:hover {
+  background-color: #4000ff; /* Changement de couleur au survol */
+  color: #ffffff; /* Changement de couleur du texte au survol */
+  border: 2px solid #ffffff; /* Changement de couleur de la bordure au survol */
+}
+
 .empty-message {
   background-color: #f8d7da; /* Couleur de fond rouge clair */
   border: 1px solid #f5c6cb; /* Bordure rouge claire */
@@ -483,16 +520,6 @@ h1 {
 
 .bandeau {
   background-color: #ffcf00; /* Couleur jaune */
-  position:absolute;
-  top:0;
-  height: 100px; /* Hauteur de 100px */
-  width: 100%; /* Prend toute la largeur de la page */
-  z-index: 0;
-  padding: 0%;
-  margin:0;
-}
-.bandeauAdmin {
-  background-color: #4000ff; /* Couleur jaune */
   position:absolute;
   top:0;
   height: 100px; /* Hauteur de 100px */
@@ -675,6 +702,122 @@ h1 {
   height: 100%; /* Utilisez la hauteur à 100% pour occuper la totalité du bouton */
   border-radius: 0%; /* Vous pouvez ajuster cela en fonction de vos besoins */
 }
+
+figcaption.client {
+  font-size: 10px;
+  margin-top: 0px;
+  text-align: center;
+  color: rgb(0, 0, 0); /* Couleur du texte pour la version client */
+}
+/* bandeau admin */
+
+.bandeauAdmin {
+  background-color: #4000ff; /* Couleur jaune */
+  position:absolute;
+  top:0;
+  height: 100px; /* Hauteur de 100px */
+  width: 100%; /* Prend toute la largeur de la page */
+  z-index: 0;
+  padding: 0%;
+  margin:0;
+}
+
+figcaption.adminLogo {
+  font-size: 10px;
+  margin-top: 0px;
+  text-align: center;
+  color: rgb(0, 0, 0); /* Couleur du texte pour la version client */
+}
+
+#stocksButton {
+  position: absolute;
+  top: 24px;
+  right: 220px;
+  width: 60px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#stocksImage {
+  top: 30px;
+  right: 235px;
+  width: 70px;
+  height: 55px;
+}
+
+#stocksButton figcaption {
+  position: absolute;
+  top: 43.5px;
+  right: -1px; /* Ajustez la position en fonction de votre mise en page */
+  width: 50px; /* Ajustez la taille du bouton */
+  height: 50px; /* Ajustez la taille du bouton */
+  font-size: 12px; /* Ajustez la taille de la police selon vos préférences */
+  text-align: center; /* Pour centrer le texte sous l'image */
+  margin-top: 5px; /* Ajustez la marge pour positionner le figcaption sous l'image */
+}
+
+#profilAdminButton {
+  position:absolute;
+  top: 24px;
+  right: 160px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+#profilAdminImage {
+  position:absolute;
+  top: 25px;
+  right: 153px; /* Ajustez la valeur en fonction de la taille de votre image */
+  width: 50px; /* Ajustez la taille de l'image */
+  height: 50px; /* Ajustez la taille de l'image */
+  border-radius: 50%; /* Assurez-vous que l'image est ronde */
+}
+#profilAdminImage figcaption {
+  position: absolute;
+  top: 67px;
+  right: 153px; /* Ajustez la position en fonction de votre mise en page */
+  width: 50px; /* Ajustez la taille du bouton */
+  height: 50px; /* Ajustez la taille du bouton */
+  font-size: 12px; /* Ajustez la taille de la police selon vos préférences */
+  text-align: center; /* Pour centrer le texte sous l'image */
+  margin-top: 5px; /* Ajustez la marge pour positionner le figcaption sous l'image */
+}
+
+#commandesAdminButton {
+  position:absolute;
+  top: 20px;
+  right: 90px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+#commandesAdminImage {
+  position:absolute;
+  top: 21px;
+  right: 83px; /* Ajustez la valeur en fonction de la taille de votre image */
+  width: 50px; /* Ajustez la taille de l'image */
+  height: 50px; /* Ajustez la taille de l'image */
+  border-radius: 50%; /* Assurez-vous que l'image est ronde */
+}
+
+#commandesAdminImage figcaption {
+  position: absolute;
+  top: 66px;
+  right: 84px; /* Ajustez la position en fonction de votre mise en page */
+  width: 50px; /* Ajustez la taille du bouton */
+  height: 50px; /* Ajustez la taille du bouton */
+  font-size: 12px; /* Ajustez la taille de la police selon vos préférences */
+  text-align: center; /* Pour centrer le texte sous l'image */
+  margin-top: 5px; /* Ajustez la marge pour positionner le figcaption sous l'image */
+}
+
 
 /* footer */
 
