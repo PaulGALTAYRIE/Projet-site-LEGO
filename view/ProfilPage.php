@@ -4,6 +4,9 @@
     require_once '../Models/utilisateurModel.php';
     require_once '../Models/commandeModel.php';
     require_once '../Models/livreurModel.php';
+    require_once '../Models/ordreModel.php';
+    require_once("../Models/pieceModel.php");
+
 
     ?>
 
@@ -71,12 +74,52 @@
                         $idLivreur = isset($commande['id_livreur']) ? $livreurModel->get_name($commande['id_livreur']) : "Non spécifié";
                         
                         echo "<div class='user_info_container'>";
-                        echo "<p>ID Commande: $idCommande</p>";
-                        echo "<p>Nom Livreur: " . $idLivreur . "</p>";
+                        echo "<p> Order Number: $idCommande</p>";
+                        echo "<p> Delivery Type: " . $idLivreur . "</p>";
                         echo "<p>Total: $total €";
 
                         echo "<form method='post' action='../Controllers/profilController.php'>";
-                        echo "<button type='submit' name='downlaod_button' class='downlaod_button' placeholder='downlaod_button'>Download</button>";
+
+                            // infos clients
+                        $userId = $_SESSION['id'];
+                        $userModel = new UserModel();
+                        $user = $userModel->get_user_by_id($userId);
+                        
+                        $pieceModel = new PieceModel();
+                        $ordreModel = new OrdreModel();
+                        $articlesCommande = $ordreModel->get_ordre($idCommande);
+                        
+                        foreach ($articlesCommande as $article) {
+                            $pieceId = $article['id_piece'];
+                            $quantity = $article['quantity'];
+                        
+                            $pieceInfo = [
+                                'name'   => $pieceModel->get_name($pieceId)['name'],
+                                'price'  => $pieceModel->get_price($pieceId)['price'],
+                                'color'  => $pieceModel->get_color($pieceId)['color'],
+                                'format' => $pieceModel->get_format($pieceId)['format'],
+                                'quantity' => $quantity,
+                            ];
+                        
+                            // Output hidden inputs for each piece info
+                            foreach ($pieceInfo as $key => $value) {
+                                echo "<input type='hidden' name='article[" . $pieceId . "][" . $key . "]' value='" . htmlspecialchars($value) . "'>";
+                            }
+                        }
+
+                        echo "<input type='hidden' name='titre' value='" . htmlspecialchars($titre) . "'>";
+                        echo "<input type='hidden' name='livreur' value='" . htmlspecialchars($idLivreur) . "'>";
+                        echo "<input type='hidden' name='total' value='" . htmlspecialchars($total) . "'>";
+                        echo "<input type='hidden' name='idCommande' value='" . htmlspecialchars($idCommande) . "'>";
+                        echo "<input type='hidden' name='user_name' value='" . htmlspecialchars($user['name']) . "'>";
+                        echo "<input type='hidden' name='user_email' value='" . htmlspecialchars($user['email']) . "'>";
+                        echo "<input type='hidden' name='user_number' value='" . htmlspecialchars($user['number']) . "'>";
+                        echo "<input type='hidden' name='user_country' value='" . htmlspecialchars($user['country']) . "'>";
+                        echo "<input type='hidden' name='user_address' value='" . htmlspecialchars($user['adresse']) . "'>";
+                        echo "<input type='hidden' name='user_postal_code' value='" . htmlspecialchars($user['code_postal']) . "'>";
+                        echo "<input type='hidden' name='user_specification' value='" . htmlspecialchars($user['specification']) . "'>";
+
+                        echo "<button type='submit' name='download_button' class='download_button' placeholder='download_button'>Download</button>";
                         echo "</form>";
 
                         echo "</div>";
