@@ -1,44 +1,57 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin page</title>
-    <link rel="stylesheet" href="../styles/siteLego.css">
-</head>
-<body id="catalogue">
-    <h1>Administrateur</h1>
-    <div class="bandeau"></div>
+<?php
+    include_once '../view/includes.php';
+    require_once '../Models/utilisateurModel.php';
+    ?>
 
-    <button id="profilButton">Profil</button>
-    <img src="../figs/Profil.png" alt="Image de profil" id="profilImage">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profil</title>
+        <link rel="stylesheet" href="../styles/siteLego.css">
+    </head>
+    <body id="ProfilPage">
+        <div class="bandeau"></div>
+        
+        <h1>Profil</h1>
+        <?php include_header_admin(); ?>
+        <main>
 
+        <?php
+                $userModel = new UserModel();
 
-    <form method="post" action="../Controllers/navOngletClient.php">
-        <label><b>panierImage</b></label><br>
-        <button type="submit" name="panierButton" id="panier" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
-            <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">
-        </button><br><br>
-    </form>
-<!--
-    <button id="panierButton">Panier</button>
-    <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">
--->
+                session_start();
+                
+                if(isset($_SESSION['id'])){
+                    $userId = $_SESSION['id'];
 
-    <button id="likeButton">Like</button>
-    <img src="../figs/Like.JPG" alt="Image de like" id="likeImage">
+                    $user = $userModel->get_user_by_id($userId);
+                    
+                        echo "<div class = user_info_container>";
+                        echo "<h1>User Information</h1>";
+                        echo "<p>Name: " . $user['name'] . "</p>";
+                        echo "<p>Email: " . $user['email'] . "</p>";
+                        echo "<p>Number: " . $user['number'] . "</p>";
+                        echo "<p>Country: " . $user['country'] . "</p>";
+                        echo "<p>Address: " . $user['adresse'] . "</p>";
+                        echo "<p>Postal Code: " . $user['code_postal'] . "</p>";
+                        echo "<p>Specification: " . $user['specification'] . "</p>";
+                        echo "</div>";
 
+                        echo "<form method='post' action='../Controllers/navOngletClient.php'>";
+                        echo "<button type='submit' name='change_button' class='change_button' placeholder='change_button'>Change informations</button>";
+                        echo "</form>";
+                }
+                else{
+                    echo "<div class = user_info_container>";
+                    echo "Connect yourself";
+                    echo "</div>";
+                }
+            ?>
 
+        </main>
+        <?php include_footer_client(); ?>
 
-    <div class="logo">
-        <form method="post" action="../Controllers/navOngletClient.php">
-            <button type="submit" name="logoButton" class="logo">
-                <img src="../figs/LegoLogo.png" alt="Logo" width="75" height="75" class="logo">
-            </button>
-        </form>
-    </div>
-
-
-    
 </body>
 </html>
