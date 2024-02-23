@@ -31,9 +31,10 @@ session_start();
         } else {
             $id_livreur = 1; // 1 signifie que le mode de livraison n'a pas encore été spécifié
             $commandeModel->create_commande($user_id, $id_livreur, $statut);
+            $existing_commandes = $commandeModel->get_commande($user_id, $statut);
             return [
-                'id' => $commandeModel->getLastInsertId(),
-                'id_livreur' => $id_livreur
+                'id' => $existing_commandes[0]['id'],
+                'id_livreur' => $existing_commandes[0]['id_livreur']
             ];
         }
     }
@@ -45,7 +46,6 @@ session_start();
     $commande_id = $commande_info['id'];
     $id_livreur = $commande_info['id_livreur'];
 
-    // Reste du code...
     $result = $commandeModel->get_commande($_SESSION['id'], $statut);
     $firstCommande = reset($result);
     $id_commande = $firstCommande['id'];
@@ -65,6 +65,20 @@ session_start();
                 if ($stock >= $_POST["quantity"]) {
                     $ordreModel->create_ordre($id_commande, $id_piece, $_POST["quantity"]);
                     $pieceModel->remove_piece($_POST["quantity"], $_POST["product_type"]);
+
+                    $priceData = $pieceModel->get_price($id_piece);
+                    $price = $priceData['price'] ?? null;
+                    
+                    if ($price !== null) {
+                        $price = $_POST["quantity"] * $price;
+                        $total = $commandeModel->get_total($id_commande)['total'];
+                        $total = $total + $price;
+                        $commandeModel->update_total($id_commande, $total);
+                    } else {
+                        // Gérer le cas où le prix n'est pas défini
+                        echo "Prix non disponible.";
+                    }
+
                     require_once("../view/cataloguePage.php");
                     exit();
                 }

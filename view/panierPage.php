@@ -79,6 +79,8 @@ require_once("../Models/utilisateurModel.php");
                 echo "</div>";
                 echo "<form method='post' action='../Controllers/panierController.php'>";
                 echo "<input type='hidden' name='id_ordre' value='{$article['id']}'>";
+                echo "<input type='hidden' name='price' value='{$piecePrice}'>";
+                echo "<input type='hidden' name='commande' value='{$commandeId}'>";
                 echo "<input type='hidden' name='pieceName' value='{$pieceName}'>";
                 echo "<input type='hidden' name='quantity' value='{$quantity}'>";
                 echo "<button type='submit' name='remove_btn' class='remove_btn' placeholder='remove_btn'>Remove</button>";

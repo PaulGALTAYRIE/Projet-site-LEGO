@@ -49,4 +49,28 @@ class CommandeModel extends DBmodel {
             "id_livreur" => $id_livreur,
         ]);
     }
+
+    function update_total(int $id, float $total) {
+        $request = "UPDATE commande SET total = :total WHERE id = :id";
+        $statement = $this->db->prepare($request);
+        $statement->execute([
+            "id" => $id,
+            "total" => $total,
+        ]);
+    }
+
+    function get_total(int $id) {
+        $request = "SELECT total FROM commande WHERE id = :id";
+        $statement = $this->db->prepare($request);
+        $statement->execute([
+            "id" => $id,
+        ]);
+        $entries = $statement->fetchAll();
+        
+        if (count($entries) == 1) {
+            $result["total"] = $entries[0]['total'];
+        }
+        
+        return $result;
+    }
 }

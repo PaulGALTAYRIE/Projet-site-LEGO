@@ -70,7 +70,7 @@ class PieceModel extends DBmodel {
         return $result;
     }
 
-    function get_price(string $id) {
+    function get_price(int $id) {
 
         $result = [];
 
