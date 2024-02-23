@@ -65,3 +65,8 @@ if (isset($_POST['change_button_admin'])) {
     header("Location: /view/changeInfoAdminPage.php");
     exit();
 }
+if (isset($_POST['commandesAdminButton'])) {
+    header("Location: /view/commandesPage.php");
+    exit();
+}
+

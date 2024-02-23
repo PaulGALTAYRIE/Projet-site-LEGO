@@ -37,7 +37,7 @@ $brickTypes = [
 </head>
 <body id="catalogue">
 
-    <h1>Catalogue</h1>
+    <h1>Stocks</h1>
     <?php include_header_admin(); ?>
 
     <main>

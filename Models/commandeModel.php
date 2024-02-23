@@ -51,6 +51,15 @@ class CommandeModel extends DBmodel {
         ]);
     }
 
+    function update_statut(int $id,  int $statut) {
+        $request = "UPDATE commande SET statut = :statut WHERE id = :id";
+        $statement = $this->db->prepare($request);
+        $statement->execute([
+            "id" => $id,
+            "statut" => $statut,
+        ]);
+    }
+
     function update_total(int $id, float $total) {
         $request = "UPDATE commande SET total = :total WHERE id = :id";
         $statement = $this->db->prepare($request);
@@ -74,4 +83,27 @@ class CommandeModel extends DBmodel {
         
         return $result;
     }
+
+    function get_all_commandes($statut) {
+        $request = "SELECT * FROM commande WHERE statut = :statut";
+        $statement = $this->db->prepare($request);
+        $statement->execute([
+            "statut" => $statut,
+        ]);
+        $entries = $statement->fetchAll();
+    
+        $result = []; // Initialisez $result comme un tableau vide
+    
+        foreach ($entries as $entry) {
+            $result[] = [
+                "id" => $entry['id'],
+                "id_utilisateur" => $entry['id_utilisateur'],
+                "id_livreur" => $entry['id_livreur'], // Ajoutez l'id du livreur dans le tableau résultat
+                "total" => $entry['total'], // Ajoutez l'id du livreur dans le tableau résultat
+            ];
+        }
+        return $result;
+    }
+
 }
+
