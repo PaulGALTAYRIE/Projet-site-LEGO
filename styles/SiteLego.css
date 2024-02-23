@@ -390,6 +390,30 @@ h2.new{
   margin-bottom: 20px; /* Ajout de marge en dessous du titre */
 }
 
+.download_button {
+  background-color: #3498db; /* Couleur de fond bleue pour le bouton Download */
+  color: #fff; /* Couleur du texte blanc */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.accept_button {
+  background-color: #008000; /* Couleur de fond verte pour le bouton Accept */
+  color: #fff; /* Couleur du texte blanc */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.download_button:hover, .accept_button:hover {
+  opacity: 0.8; /* Réduit l'opacité au survol pour donner un effet visuel */
+}
+
 .change_button {
   background-color: #ffffff; /* Couleur de fond blanche */
   color: #000000; /* Couleur du texte noire */

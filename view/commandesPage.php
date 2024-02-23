@@ -6,7 +6,6 @@ require_once '../Models/commandeModel.php';
 require_once '../Models/livreurModel.php';
 require_once '../Models/ordreModel.php';
 require_once("../Models/pieceModel.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +28,6 @@ require_once("../Models/pieceModel.php");
         <?php
             function afficherCommandesAdmin($commandes, $titre, $livreurModel) {
                 if (!empty($commandes)) {
-                    echo "<h2>$titre</h2>";
                     foreach ($commandes as $commande) {
                         $idCommande = $commande['id'];
                         $total = $commande['total'];
@@ -43,6 +41,9 @@ require_once("../Models/pieceModel.php");
                         $idLivreur = isset($commande['id_livreur']) ? $livreurModel->get_name($commande['id_livreur']) : "Non spécifié";
                         
                         echo "<div class='user_info_container'>";
+
+                        echo "<h2>$titre</h2>";
+
                         echo "<p> Order Number: $idCommande</p>";
                         echo "<p> Name: " . $user['name'] . "</p>";
                         echo "<p> Delivery Type: " . $idLivreur . "</p>";
@@ -84,22 +85,25 @@ require_once("../Models/pieceModel.php");
                         echo "<input type='hidden' name='user_postal_code' value='" . htmlspecialchars($user['code_postal']) . "'>";
                         echo "<input type='hidden' name='user_specification' value='" . htmlspecialchars($user['specification']) . "'>";
 
-                    // Ajoutez le bouton "Accept" uniquement pour les commandes en statut 1
-                    if ($titre == "Order in Validation Process") {
-                        echo "<button type='submit' name='download_button_admin' class='download_button' placeholder='download_button'>Download</button>";
-                        echo "<button type='submit' name='accept_button' class='accept_button' placeholder='accept_button'>Accept</button>";
-                    } else {
-                        echo "<button type='submit' name='download_button_admin' class='download_button' placeholder='download_button'>Download</button>";
-                    }
+                        // Ajoutez le bouton "Accept" uniquement pour les commandes en statut 1
+                        if ($titre == "Order in Validation Process") {
+                            echo "<button type='submit' name='download_button_admin' class='download_button' placeholder='download_button'>Download</button>";
+                            echo "<button type='submit' name='accept_button' class='accept_button' placeholder='accept_button'>Accept</button>";
+                        } else {
+                            echo "<button type='submit' name='download_button_admin' class='download_button' placeholder='download_button'>Download</button>";
+                        }
+                        
                         echo "</form>";
 
                         echo "</div>";
                     }
+                    echo "<hr>"; // Ligne de séparation après chaque section de commandes
                 } else {
                     echo "<div class='empty-message'>";
                     echo "<h2>$titre</h2>";
                     echo "<p>Empty<p>";
                     echo "</div>";
+                    echo "<hr>"; // Ligne de séparation même s'il n'y a pas de commandes dans cette section
                 }
             }
 
