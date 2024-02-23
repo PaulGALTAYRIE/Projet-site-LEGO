@@ -13,8 +13,9 @@
                 </form>
             </div>
 
+            <!-- redirection catalogue -->
                 <form method="post" action="../Controllers/navOngletClient.php">
-                    <button type="submit" name="catalogueButton" id="catalogueButton"style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+                    <button type="submit" name="catalogueButton" id="catalogueButton" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
                         <img src="../figs/catalogue.png" alt="catalogue" id="catalogueImage">
                     </button>
                 </form>
@@ -26,12 +27,6 @@
                 </button>
             </form>    
             
-            
-            <!--like
-            <button id="likeButton">Like</button>
-            <img src="../figs/Like.JPG" alt="Image de like" id="likeImage">
-            -->
-
             <!-- redirection Panier -->
             <form method="post" action="../Controllers/navOngletClient.php">
                 <button type="submit" name="panierButton" id="panier" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">

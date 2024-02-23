@@ -40,6 +40,7 @@
 
     /* test piece model */
     
+    /*
     require_once("../Models/pieceModel.php");
 
     $pieceModel = new PieceModel();
@@ -68,17 +69,17 @@
     print_r($result);
 
     /* test commande model */
-    /*
+    
     require_once("../Models/commandeModel.php");
 
     $commandeModel = new CommandeModel();
 
     $id_utilisateur = 7;
-    $statut = 0;
+    $statut = 1;
 
     $result = $commandeModel->get_commande($id_utilisateur, $statut);
     print_r($result);
-    */
+    
     
 
 

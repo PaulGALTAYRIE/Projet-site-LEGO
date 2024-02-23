@@ -20,23 +20,25 @@ class CommandeModel extends DBmodel {
 
     function get_commande(int $id_utilisateur, int $statut) {
         $result = [];
-
-        $request = "SELECT id FROM commande WHERE id_utilisateur = :id_utilisateur AND statut = :statut";
+    
+        $request = "SELECT id, id_livreur FROM commande WHERE id_utilisateur = :id_utilisateur AND statut = :statut";
         $statement = $this->db->prepare($request);
         $statement->execute([
             "id_utilisateur" => $id_utilisateur,
             "statut"=> $statut
         ]);
-        $entries = $statement->fetchAll();
-
+        $entries = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
         foreach ($entries as $entry) {
             $result[] = [
-            "id" => $entry['id'],
+                "id" => $entry['id'],
+                "id_livreur" => $entry['id_livreur'], // Ajoutez l'id du livreur dans le tableau résultat
             ];
         }
     
         return $result;
     }
+    
 
     function update_commande(int $id, int $statut, int $id_livreur) {
         $request = "UPDATE commande SET statut = :statut, id_livreur = :id_livreur WHERE id = :id";
