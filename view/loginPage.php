@@ -29,14 +29,16 @@ include_once '../view/includes.php';
             <label><b>Password</b></label><br>
             <input type="password" name="mdp" id="mdp" placeholder="password"><br><br>
             <button type="submit">Submit</button>
-            <br><br>
-            <input type="checkbox" id="check">
-            <span>Remember me</span><br><br>
-            Forgot <a href="#">Password</a>
-        </form>
-        <h2>Créer un nouveau compte</h2>
-        <form method="post" action="../Controllers/navOngletClient.php">
-            <button type="submit" name="newAccountButton" id="newAccount" placeholder="newAccount">Nouveau compte</button>
+
+        <div class="sectionNew">
+            <h2>Statut</h2>
+            <label>
+                <input type="radio" name="userType" value="admin"> Administrateur
+            </label>
+            <label>
+                <input type="radio" name="userType" value="client"> Client
+            </label>
+        </div>
         </form>
     </main>
 

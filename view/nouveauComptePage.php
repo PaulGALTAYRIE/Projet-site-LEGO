@@ -23,7 +23,7 @@ include_once '../view/includes.php';
                 print_r($something_to_say);
             }
         ?>
-        <form id="login" method="post" action="../Controllers/newAccountController.php">
+        <form id="loginNewProfil" method="post" action="../Controllers/newAccountController.php">
             <label><b>User Name</b></label><br>
             <input type="text" name="name" id="name" placeholder="username"><br><br>
             <label><b>Password</b></label><br>
@@ -41,7 +41,7 @@ include_once '../view/includes.php';
             <input type="int" name="code_postal" id="code_postal" placeholder="code_postal"><br><br>
             <label><b>Specification</b></label><br>   
             <input type="text" name="specification" id="specification" placeholder="specification"><br><br>
-            <div class="section">
+            <div class="sectionNew">
             <h2>Statut</h2>
                 <label>
                 <input type="radio" name="userType" value="admin"> Administrateur
@@ -51,10 +51,7 @@ include_once '../view/includes.php';
                 </label>
              </div>
             <button type="submit">Submit</button>
-            <br><br>
-            <input type="checkbox" id="check">
-            <span>Remember me</span><br><br>
-            Forgot <a href="#">Password</a>
+
 
         </form>
     </main>

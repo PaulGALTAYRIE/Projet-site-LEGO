@@ -30,7 +30,7 @@ session_start();
     $id_commande = $firstCommande['id'];
 
 
-    $result = $pieceModel->get_quantity_price("Brick 2x3 red");
+    $result = $pieceModel->get_quantity_price($_POST["product_type"]);
     $stock = $result['quantity'];
     $result = $pieceModel->get_id_piece($_POST["product_type"]);
     $id_piece = $result['id'];

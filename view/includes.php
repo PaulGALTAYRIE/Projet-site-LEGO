@@ -13,6 +13,12 @@
                 </form>
             </div>
 
+                <form method="post" action="../Controllers/navOngletClient.php">
+                    <button type="submit" name="catalogueButton" id="catalogueButton"style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
+                        <img src="../figs/catalogue.png" alt="catalogue" id="catalogueImage">
+                    </button>
+                </form>
+
             <!-- redirection profil -->
             <form method="post" action="../Controllers/navOngletClient.php">
                 <button type="submit" name="profilButton" id="profil" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">

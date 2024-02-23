@@ -39,7 +39,7 @@
 
 
     /* test piece model */
-    /*
+    
     require_once("../Models/pieceModel.php");
 
     $pieceModel = new PieceModel();
@@ -47,7 +47,11 @@
     $name = "Brick 2x3 blue";
 
     $result = $pieceModel->get_quantity_price($name);
+    $stock = $result['quantity'];
+
     print_r($result);
+    print_r($stock);
+
 
     
 
@@ -64,7 +68,7 @@
     print_r($result);
 
     /* test commande model */
-
+    /*
     require_once("../Models/commandeModel.php");
 
     $commandeModel = new CommandeModel();
@@ -74,5 +78,7 @@
 
     $result = $commandeModel->get_commande($id_utilisateur, $statut);
     print_r($result);
+    */
+    
 
 

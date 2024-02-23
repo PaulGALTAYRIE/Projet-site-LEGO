@@ -9,6 +9,11 @@ if (isset($_POST['checkoutButton'])) {
     header("Location: ../view/paiementPage.php");
     exit();
 }
+if (isset($_POST['checkoutButtonEmpty'])) {
+    $something_to_say ='Your shopping cart is empty !';
+    require_once "../view/panierPage.php";
+    exit();
+}
 
 if (isset($_POST['logoButton'])) {
     header("Location: /view/cataloguePage.php");

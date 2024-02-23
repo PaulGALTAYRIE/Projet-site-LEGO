@@ -122,7 +122,7 @@ include_once '../view/includes.php';
         </div>
         
         <!-- Button to submit the form -->
-        <button class="submit-btn">Submit Order</button>
+        <button class="change_button">Submit Order</button>
         </form>
 
     </main>

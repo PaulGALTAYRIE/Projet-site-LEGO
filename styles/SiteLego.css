@@ -4,6 +4,56 @@
   padding-left: 48%;
   padding-top: 2%;
 }
+
+#loginNewProfil {
+  max-width: 400px;
+  margin: auto;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px; /* Ajustez la taille du padding en fonction de vos préférences */
+  box-sizing: border-box; /* Assurez-vous que le padding est inclus dans la largeur du bouton */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block; /* Pour permettre la mise en ligne horizontale avec les champs de saisie */
+  width: 100%; /* Ajustez la largeur en fonction de vos préférences */
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+
+
+/* Optional: Style for error messages */
+.error-message {
+  color: #FF0000;
+  margin-top: 5px;
+}
+
+
 .login {
   width: 275px;
   height: 325px;
@@ -23,10 +73,14 @@
   display: flex;
   flex-direction: column;
 }
+
 .login label {
   color: #000000;
   font-size: 17px;
+  text-align: center;
+  margin: 0;
 }
+
 span {
   color: rgb(0, 0, 0);
   font-size: 17px;
@@ -37,11 +91,23 @@ a {
   color:#000000;
   background-color: #dbdbdb;
 }
+
 .login h2 {
-  margin:20;
+  margin-top:0px;
+  margin-bottom:20px;
+
   text-align: center;
   color: #000000;
 }
+
+h2.new{
+  margin-top:30px;
+  margin-bottom:20px;
+
+  text-align: center;
+  color: #000000;
+}
+
 
 .section h1, h2 {
   text-align: center;
@@ -74,36 +140,42 @@ a {
 }
 
 /* Nouveau compte*/
+.sectionNew {
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 70px;
+}
 
+.sectionNew h2 {
+  margin-bottom: 15px;
+}
+
+.sectionNew label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.sectionNew input[type="radio"] {
+  margin-right: 5px;
+}
 
 /*Catalogue*/
 .catalogue {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 50px;
 }
 
-.pack1 img{
+.pack img{
   height: 150px;
   width: 150px;
   border-radius: 20px;
 }
-.pack2 img{
-  height: 150px;
-  width: 150px;
-  border-radius: 20px;
-}
-.pack3 img{
-  height: 150px;
-  width: 150px;
-  border-radius: 20px;
-}
-.pack4 img{
-  height: 150px;
-  width: 150px;
-  border-radius: 20px;
-}
-.pack1 p {
+
+.pack p {
   margin: 5px 0;
   height: 40px;
   width: 250px;
@@ -111,69 +183,17 @@ a {
   border-radius: 15px;
   text-align: center;
 }
-.pack2 p {
-  margin: 5px 0;
-  height: 40px;
-  width: 250px;
-  background-color: #ffffff;
-  border-radius: 15px;
-  text-align: center;
-}
-.pack3 p {
-  margin: 5px 0;
-  height: 40px;
-  width: 250px;
-  background-color: #ffffff;
-  border-radius: 15px;
-  text-align: center;
-}
-.pack4 p {
-  margin: 5px 0;
-  height: 40px;
-  width: 250px;
-  background-color: #ffffff;
-  border-radius: 15px;
-  text-align: center;
-}
-.pack1 {
-  margin-top: 50px;
-  margin-left:40px;
+
+.pack {
+  margin-top: 20px;
+  margin-left:10px;
+  margin-right:10px;
+  margin-bottom:10px;
   display: flex; /* Activer la flexbox pour les éléments */
   flex-direction: column; /* Aligner les éléments en colonne */
   align-items: center; /* Centrer horizontalement les éléments */
   border: 3px solid #959090;
   border-radius: 10px;
-  background-color: #ffffff;
-}
-
-.pack2 {
-  margin-top: 40px;
-  margin-left:40px;
-  display: flex; /* Activer la fl exbox pour les éléments */
-  flex-direction: column; /* Aligner les éléments en colonne */
-  align-items: center; /* Centrer horizontalement les éléments */
-  border: 3px solid #959090;
-  border-radius: 15px;
-  background-color: #ffffff;
-}
-.pack3 {
-  margin-top: 50px;
-  margin-left:40px;
-  display: flex; /* Activer la flexbox pour les éléments */
-  flex-direction: column; /* Aligner les éléments en colonne */
-  align-items: center; /* Centrer horizontalement les éléments */
-  border: 3px solid #959090;
-  border-radius: 15px;
-      background-color: #ffffff;
-}
-.pack4 {
-  margin-top: 60px;
-  margin-left:40px;
-  display: flex; /* Activer la flexbox pour les éléments */
-  flex-direction: column; /* Aligner les éléments en colonne */
-  align-items: center; /* Centrer horizontalement les éléments */
-  border: 3px solid #959090;
-  border-radius: 15px;
   background-color: #ffffff;
 }
 
@@ -251,10 +271,6 @@ a {
   .form-group {
     margin-bottom: 10px;
   }
-  .submit-btn{
-    margin: 0 auto; /* Cette ligne centrer le bouton */
-    display: block; /* Cette ligne pour assurer le centrage */
-  }
 
 
 
@@ -303,7 +319,7 @@ a {
 .total {
   font-size:large;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .checkout-btn {
@@ -374,6 +390,9 @@ a {
 
 .something_to_say{
   margin-top : 100px;
+  margin-right : 100px;
+  margin-left : 100px;
+
   text-align: center;
   font-weight: bold;
   color: red;
@@ -431,6 +450,27 @@ h1 {
   padding: 0%;
   margin:0;
 }
+
+#catalogueButton {
+  position:absolute;
+  top: 24px;
+  right: 230px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+#catalogueImage {
+  position:absolute;
+  top: 24px;
+  right: 230px; /* Ajustez la valeur en fonction de la taille de votre image */
+  width: 50px; /* Ajustez la taille de l'image */
+  height: 50px; /* Ajustez la taille de l'image */
+  border-radius: 50%; /* Assurez-vous que l'image est ronde */
+}
+
 #profilButton {
   position:absolute;
   top: 24px;

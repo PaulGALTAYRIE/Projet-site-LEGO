@@ -19,10 +19,19 @@ require_once("../Models/utilisateurModel.php");
 </head>
 <body>
     <div class="Panier">
-    <h1>Panier</h1>
+    <h1>Shopping cart</h1>
     <?php include_header_client(); ?>
 
     <main>
+    <?php 
+            // if an error happened
+            if (isset($something_to_say)) {
+                echo "<div class='something_to_say'>";
+                echo "<h2> $something_to_say </h2>";
+                echo "</div>";
+            }
+    ?>
+
     <?php
 
     session_start();
@@ -85,9 +94,18 @@ require_once("../Models/utilisateurModel.php");
         <div class="total">
             <p>Total: <?php echo $total_price?> €</p>
 
-            <form method="post" action="../Controllers/navOngletClient.php">
-                <button type="submit" name="checkoutButton">Checkout</button>
-            </form>
+            <?php
+            if ($total_price != 0){
+                echo "<form method='post' action='../Controllers/navOngletClient.php'>";
+                echo "<button type='submit' class='change_button' name='checkoutButton'>Checkout</button>";
+                echo "</form>";
+            }
+            else{
+                echo "<form method='post' action='../Controllers/navOngletClient.php'>";
+                echo "<button type='submit' class='change_button' name='checkoutButtonEmpty'>Checkout</button>";
+                echo "</form>";
+            }
+            ?>
         </div>
 
     </main>
