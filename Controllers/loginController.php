@@ -35,7 +35,7 @@
         session_start();
         session_destroy();
 
-        require("../view/loginPage.php");
+        require("../view/index.php");
     }
     
 
@@ -49,6 +49,6 @@
     }
     
     else {
-        require_once("../view/loginPage.php");
+        require_once("../view/index.php");
     }
 
