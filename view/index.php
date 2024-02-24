@@ -36,10 +36,16 @@ include_once '../view/includes.php';
         <form method="post" action="../Controllers/navOngletClient.php">
             <button type="submit" name="newAccountButton" id="newAccount" placeholder="newAccount">Sign in</button>
         </form>
-    </main>
+
+<p>Si vous voulez vous pouvez créer votre propre compte (Admin pour avoir accès au site en Admin ou Client pour avoir accès au site en Client)</p>
+<p>Sinon vous pouvez utiliser les comptes suivants :</p>
+<p> - Name : Admin ; Password : 1234 </p>
+<p> - Name : Client ; Password : 0000 </p>
 
 
     </main>
+
+
 
     </div>
     
