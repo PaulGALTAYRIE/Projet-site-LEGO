@@ -12,7 +12,7 @@
 
             if(isset($result['name'])) {
                 $something_to_say = "You alrdeady have this account.";
-                require_once("../view/index.php");
+                require_once("../index.php");
             }
 
             else{
@@ -46,12 +46,12 @@
         session_start();
         session_destroy();
 
-        require("../view/index.php");
+        require("../index.php");
     }
     
 
     if (isset($_SESSION['name'])) {
-            require_once("../view/index.php");
+            require_once("../index.php");
     }
     
     else {

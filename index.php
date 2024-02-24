@@ -1,5 +1,5 @@
 <?php
-include_once '../view/includes.php';
+include_once 'view/includes.php';
 ?>
 
 <!DOCTYPE html>

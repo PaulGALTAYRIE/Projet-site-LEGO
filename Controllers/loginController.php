@@ -35,7 +35,7 @@
         session_start();
         session_destroy();
 
-        require("../view/index.php");
+        require("../index.php");
     }
     
 
@@ -49,6 +49,6 @@
     }
     
     else {
-        require_once("../view/index.php");
+        require_once("../index.php");
     }
 
