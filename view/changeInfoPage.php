@@ -32,7 +32,7 @@ require_once '../Models/utilisateurModel.php';
 
     <div class="section">
             <h2>Profil</h2>
-            <form method="post" action="../Controllers/infoUserChangeController">
+            <form method="post" action="../Controllers/infoUserChangeController.php">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name">

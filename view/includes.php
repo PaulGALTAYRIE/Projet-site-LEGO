@@ -33,7 +33,7 @@
             <!-- redirection Panier -->
             <form method="post" action="../Controllers/navOngletClient.php">
                 <button type="submit" name="panierButton" id="panier" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
-                    <img src="../figs/Panier.JPG" alt="Image du panier" id="panierImage">
+                    <img src="../figs/Panier.png" alt="Image du panier" id="panierImage">
                     <figcaption>Cart</figcaption>
                 </button>
             </form>
@@ -41,7 +41,7 @@
             <!-- logout -->
             <form id=logout method="post" action="../Controllers/loginController.php">
                 <button type="submit" name="logoutButton" id="logout" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
-                    <img src="../figs/logout.PNG" alt="Image du logout" id="logoutImage">
+                    <img src="../figs/logout.png" alt="Image du logout" id="logoutImage">
                     <figcaption>Logout</figcaption>
                 </button><br><br>
             </form>
@@ -100,7 +100,7 @@
             <!-- redirection commandesAdmin -->
             <form method="post" action="../Controllers/navOngletClient.php">
                 <button type="submit" name="commandesAdminButton" id="panier" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
-                    <img src="../figs/Colis.PNG" alt="Image du panier" id="commandesAdminImage">
+                    <img src="../figs/Colis.png" alt="Image du Colis" id="commandesAdminImage">
                     <figcaption>Orders</figcaption>
                 </button>
             </form>
@@ -108,7 +108,7 @@
             <!-- logoutAdmin -->
             <form id="logout" method="post" action="../Controllers/loginController.php">
                 <button type="submit" name="logoutButton" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">
-                    <img src="../figs/logoutAdmin.PNG" alt="Image du logout" id="logoutImage">
+                    <img src="../figs/logoutAdmin.png" alt="Image du logout" id="logoutImage">
                     <figcaption>Logout</figcaption>
                 </button><br><br>
             </form>

@@ -1,10 +1,12 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-require_once("../Models/ordreModel.php");
-require_once("../Models/commandeModel.php");
-require_once("../Models/pieceModel.php");
+require_once(__DIR__ . "/../Models/ordreModel.php");
+require_once(__DIR__ . "/../Models/commandeModel.php");
+require_once(__DIR__ . "/../Models/pieceModel.php");
 
-require_once("../Models/DBModel.php");
+require_once(__DIR__ . "/../Models/DBModel.php");
 
 $commandeModel = new CommandeModel();
 $ordreModel = new OrdreModel();
@@ -16,7 +18,7 @@ session_start();
 
     if (!isset($_SESSION['id'])) {
         $something_to_say = "Connectez-vous";
-        require_once("../view/cataloguePage.php");
+        require_once(__DIR__ . "/../view/cataloguePage.php");
         exit();
     }
 
@@ -78,23 +80,24 @@ session_start();
                         // Gérer le cas où le prix n'est pas défini
                         echo "Prix non disponible.";
                     }
+                    echo "Je suis là";
 
-                    require_once("../view/cataloguePage.php");
+                    require_once(__DIR__ . "/../view/cataloguePage.php");
                     exit();
                 }
                 else{
                     $something_to_say = "Not enough sotcks !";
-                    require_once("../view/cataloguePage.php");
+                    require_once(__DIR__ . "/../view/cataloguePage.php");
                 }
             }
             else{
                 $something_to_say = "You can't enter a negative number !";
-                require_once("../view/cataloguePage.php");
+                require_once(__DIR__ . "/../view/cataloguePage.php");
             }
         }
         else {
             $something_to_say = "Enter a number !";
-            require_once("../view/cataloguePage.php");
+            require_once(__DIR__ . "/../view/cataloguePage.php");
         }
 ?>
 

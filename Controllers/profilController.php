@@ -46,6 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['download_button'])) {
     // Écrire les informations dans le fichier
     file_put_contents($fileName, $userInfo);
 
+    print_r($userInfo);
+
     // Envoyer le fichier au navigateur
     readfile($fileName);
 

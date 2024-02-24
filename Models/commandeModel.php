@@ -5,18 +5,16 @@ require_once("DBModel.php");
 class CommandeModel extends DBmodel {
 
     function create_commande(int $id_utilisateur, int $id_livreur, int $statut) {
-
-        $request = "INSERT INTO commande (id_utilisateur, id_livreur, statut) VALUES (:id_utilisateur, :id_livreur, :statut)";
+        $total = 0; // Remplacez ceci par le calcul réel de la valeur de total
+        $request = "INSERT INTO commande (id_utilisateur, id_livreur, statut, total) VALUES (:id_utilisateur, :id_livreur, :statut, :total)";
         $statement = $this->db->prepare($request);
-        $statement->execute(
-            [
-                "id_utilisateur" => $id_utilisateur,
-                "id_livreur" => $id_livreur,
-                "statut" => $statut
-            ]
-            );
+        $statement->execute([
+            "id_utilisateur" => $id_utilisateur,
+            "id_livreur" => $id_livreur,
+            "statut" => $statut,
+            "total" => $total
+        ]);
     }
-
 
     function get_commande(int $id_utilisateur, int $statut) {
         $result = [];

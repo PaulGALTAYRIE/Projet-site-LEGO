@@ -5,7 +5,7 @@ require_once '../Models/commandeModel.php';
 if(isset($_POST['accept_button'])){
     $commandeModel = new CommandeModel();
     $commandeModel->update_statut($_POST['idCommande'], 2);
-    header("Location: /view/commandesPage.php");
+    header("Location: ../view/commandesPage.php");
     exit();
 }
 
@@ -54,6 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['download_button_admin'
 
     // Écrire les informations dans le fichier
     file_put_contents($fileName, $userInfo);
+
+    print_r($userInfo);
 
     // Envoyer le fichier au navigateur
     readfile($fileName);

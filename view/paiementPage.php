@@ -34,7 +34,7 @@ include_once '../view/includes.php';
         <!-- Section Profil -->
         <div class="section">
             <h2>Profil</h2>
-            <form method="post" action="../Controllers/paiementController">
+            <form method="post" action="../Controllers/paiementController.php">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name">
