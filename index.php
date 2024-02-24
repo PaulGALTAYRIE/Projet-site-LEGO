@@ -6,7 +6,7 @@ include_once 'view/includes.php';
 <html>
 <head>
     <title>Login Form</title>
-    <link rel="stylesheet" type="text/css" href="../styles/siteLego.css">
+    <link rel="stylesheet" type="text/css" href="/styles/siteLego.css">
 </head>
 <body id="login">
 <div class="backgroundBlur"></div>
