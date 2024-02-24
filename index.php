@@ -6,11 +6,11 @@ include_once 'view/includes.php';
 <html>
 <head>
     <title>Login Form</title>
-    <link rel="stylesheet" type="text/css" href="/styles/siteLego.css">
+    <link rel="stylesheet" type="text/css" href="styles/siteLego.css">
 </head>
 <body id="login">
 <div class="backgroundBlur"></div>
-  <img src="../figs/LegoLogo.png" alt="Login Image" id="logo1" width="75" height="75">
+  <img src="figs/LegoLogo.png" alt="Login Image" id="logo1" width="75" height="75">
     <div class="login">
 
     <main>
@@ -23,7 +23,7 @@ include_once 'view/includes.php';
                 print_r($something_to_say);
             }
         ?>
-        <form id="login" method="post" action="../Controllers/loginController.php">
+        <form id="login" method="post" action="Controllers/loginController.php">
             <label><b>User Name</b></label><br>
             <input type="text" name="name" id="name" placeholder="username"><br><br>
             <label><b>Password</b></label><br>
@@ -33,7 +33,7 @@ include_once 'view/includes.php';
 
         </form>
         <h2 class='new'>New account</h2>
-        <form method="post" action="../Controllers/navOngletClient.php">
+        <form method="post" action="Controllers/navOngletClient.php">
             <button type="submit" name="newAccountButton" id="newAccount" placeholder="newAccount">Sign in</button>
         </form>
 
