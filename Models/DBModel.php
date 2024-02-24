@@ -12,9 +12,9 @@ class DBModel {
     private function connect_to_db() {   
         $engine='mysql';
         $host = 'localhost';
-        $dbname = 'lego_web_site';
-        $user = 'root';
-        $pwd = '';
+        $dbname = 'tai_frog';
+        $user = 'tai_frog';
+        $pwd = 'A6495AVLXR';
 
         try {
             $this->db = new PDO($engine.':host='.$host.';dbname='.$dbname.';charset=utf8', $user, $pwd, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);

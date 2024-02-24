@@ -1,12 +1,12 @@
 <?php
 
 if (isset($_POST['panierButton'])) {
-    header("Location: ../view/panierPage.php");
+    header("Location: view/panierPage.php");
     exit();
 }
 
 if (isset($_POST['checkoutButton'])) {
-    header("Location: ../view/paiementPage.php");
+    header("Location: view/paiementPage.php");
     exit();
 }
 if (isset($_POST['checkoutButtonEmpty'])) {
@@ -16,7 +16,7 @@ if (isset($_POST['checkoutButtonEmpty'])) {
 }
 
 if (isset($_POST['logoButton'])) {
-    header("Location: /view/cataloguePage.php");
+    header("Location: /tai/tai_frog/project/view/cataloguePage.php");
     exit();
 }
 if (isset($_POST['catalogueButton'])) {
