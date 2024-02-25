@@ -4,26 +4,26 @@ require_once("../Models/pieceModel.php");
 
 $pieceModel = new PieceModel();
 $brickTypes = [
-    "2x3 red",
-    "2x3 blue",
-    "2x3 green",
-    "2x3 yellow",
-    "2x3 orange",
-    "2x3 black",
-    "2x3 purple",
-    "2x3 pink",
-    "2x3 grey",
-    "2x3 white",
-    "2x2 red",
-    "2x2 blue",
-    "2x2 green",
-    "2x2 yellow",
-    "2x2 orange",
-    "2x2 black",
-    "2x2 purple",
-    "2x2 pink",
-    "2x2 grey",
-    "2x2 white"
+    "2x3red",
+    "2x3blue",
+    "2x3green",
+    "2x3yellow",
+    "2x3orange",
+    "2x3black",
+    "2x3purple",
+    "2x3pink",
+    "2x3grey",
+    "2x3white",
+    "2x2red",
+    "2x2blue",
+    "2x2green",
+    "2x2yellow",
+    "2x2orange",
+    "2x2black",
+    "2x2purple",
+    "2x2pink",
+    "2x2grey",
+    "2x2white"
 ];
 ?>
 
@@ -53,17 +53,17 @@ $brickTypes = [
 
             <?php foreach ($brickTypes as $brickType): ?>
                 <div class="pack">
-                    <img src="../figs/brique <?php echo $brickType; ?>.PNG" alt="Pièce LEGO <?php echo $brickType; ?>">
+                    <img src="../figs/brique<?php echo $brickType; ?>.PNG" alt="Pièce LEGO <?php echo $brickType; ?>">
                     <p><?php echo $brickType; ?></p>
                     <?php
-                        $result = $pieceModel->get_quantity_price("Brick $brickType");
+                        $result = $pieceModel->get_quantity_price("Brick$brickType");
                         echo("<p>Quantity = $result[quantity]</p>");
                         echo("<p>Price = $result[price] €</p>");
                     ?>
                     <form method="post" action="../Controllers/addPieceController.php">
-                        <input type="hidden" name="product_type" value="Brick <?php echo $brickType; ?>">
-                        <input type="int" name="quantity" id="quantity" placeholder="quantity"><br><br>
-                        <button type="submit" name="ajoutAchatButton" class="ajoutAchat" placeholder="ajoutAchat">Add</button>
+                        <input type="hidden" name="product_type" value="Brick<?php echo $brickType; ?>">
+                        <input type="number" name="quantity"><br><br>
+                        <button type="submit" name="ajoutAchatButton" class="ajoutAchat">Add</button>
                     </form>
                 </div>
             <?php endforeach; ?>

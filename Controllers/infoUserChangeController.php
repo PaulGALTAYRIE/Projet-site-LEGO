@@ -58,12 +58,12 @@ else {
     
         $userModel->update_user_change($id, $_POST['name'], $_POST['mdp'], $_POST['email'], $_POST['number'], $_POST['country'], $_POST['address'], $_POST['postalCode'], $_POST['specification']);
     
-        header("Location: ../view/ProfilPage.php");
+        header("Location: ../view/profilPage.php");
         exit();
     }
     else{
         $something_to_say = "Connect yourself !";
-        require_once("../view/ProfilPage.php");
+        require_once("../view/profilPage.php");
         exit();    
     }
 }

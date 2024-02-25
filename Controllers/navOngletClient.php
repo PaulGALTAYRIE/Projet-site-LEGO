@@ -25,7 +25,7 @@ if (isset($_POST['catalogueButton'])) {
 }
 
 if (isset($_POST['profilButton'])) {
-    header("Location: /tai/tai_frog/project/view/ProfilPage.php");
+    header("Location: /tai/tai_frog/project/view/profilPage.php");
     exit();
 }
 

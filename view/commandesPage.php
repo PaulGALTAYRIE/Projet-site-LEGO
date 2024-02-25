@@ -47,7 +47,7 @@ require_once("../Models/pieceModel.php");
                         echo "<p> Order Number: $idCommande</p>";
                         echo "<p> Name: " . $user['name'] . "</p>";
                         echo "<p> Delivery Type: " . $idLivreur . "</p>";
-                        echo "<p>Total: $total €";
+                        echo "<p>Total: $total €</p>";
 
                         echo "<form method='post' action='../Controllers/commandesPageController.php'>";
 
@@ -69,7 +69,7 @@ require_once("../Models/pieceModel.php");
                         
                             // Output hidden inputs for each piece info
                             foreach ($pieceInfo as $key => $value) {
-                                echo "<input type='hidden' name='article[" . $pieceId . "][" . $key . "]' value='" . htmlspecialchars($value) . "'>";
+                                echo "<input type='hidden' name='article[$pieceId][$key]' value='" . htmlspecialchars($value) . "'>";
                             }
                         }
 
@@ -87,10 +87,10 @@ require_once("../Models/pieceModel.php");
 
                         // Ajoutez le bouton "Accept" uniquement pour les commandes en statut 1
                         if ($titre == "Order in Validation Process") {
-                            echo "<button type='submit' name='download_button_admin' class='download_button' placeholder='download_button'>Download</button>";
-                            echo "<button type='submit' name='accept_button' class='accept_button' placeholder='accept_button'>Accept</button>";
+                            echo "<button type='submit' name='download_button_admin' class='download_button'>Download</button>";
+                            echo "<button type='submit' name='accept_button' class='accept_button'>Accept</button>";
                         } else {
-                            echo "<button type='submit' name='download_button_admin' class='download_button' placeholder='download_button'>Download</button>";
+                            echo "<button type='submit' name='download_button_admin' class='download_button'>Download</button>";
                         }
                         
                         echo "</form>";

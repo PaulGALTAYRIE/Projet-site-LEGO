@@ -16,118 +16,104 @@ include_once '../view/includes.php';
     <h1>Order validation</h1>
     <?php include_header_client(); ?>
 
-    </div>
+        <main>
 
-    <div class="backgroundBlur"></div>
-    <div class="container">
-    <main>
-
-    <?php 
-            // if an error happened
+            <?php 
+            // Si une erreur s'est produite
             if (isset($something_to_say)) {
                 echo "<div class='something_to_say'>";
                 echo "<h2> $something_to_say </h2>";
                 echo "</div>";
             }
-        ?>
-        
-        <!-- Section Profil -->
-        <div class="section">
-            <h2>Profil</h2>
-            <form method="post" action="../Controllers/paiementController.php">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" name="email">
-                </div>
-                <div class="form-group">
-                    <label for="number">Phone number:</label>
-                    <input type="text" id="number" name="number">
-                </div>
-        </div>
+            ?>
 
-        <!-- Section Address -->
-        <div class="section">
-            <h2>Address</h2>
-                <div class="form-group">
-                    <label for="address">Address:</label>
-                    <input type="text" id="address" name="address">
-                </div>
-                <div class="form-group">
-                    <label for="postalCode">Postal Code:</label>
-                    <input type="text" id="postalCode" name="postalCode">
-                </div>
-                <div class="form-group">
-                    <label for="country">Country:</label>
-                    <input type="text" id="country" name="country">
-                </div>
-                <div class="form-group">
-                    <label for="specification">Specification:</label>
-                    <input type="text" id="specification" name="specification">
-                </div>
-        </div>
-        
-        <!-- Section Buy -->
-        <div class="section">
-            <h2>Buy</h2>
-                <div class="form-group">
-                    <label for="cardType">Type of Card:</label>
-                    <select id="cardType" name="cardType">
-                        <option value="mastercard">Mastercard</option>
-                        <option value="visa">Visa</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="cardName">Name on Card:</label>
-                    <input type="text" id="cardName" name="cardName">
-                </div>
-                <div class="form-group">
-                    <label for="cardNumber">Card Number:</label>
-                    <input type="text" id="cardNumber" name="cardNumber">
-                </div>
-                <div class="form-group">
-                    <label for="cardCVV">CVV:</label>
-                    <input type="text" id="cardCVV" name="cardCVV">
-                </div>
-                <div class="form-group">
-                    <label for="cardExpiry">Expiry Date:</label>
-                    <input type="text" id="cardExpiry" name="cardExpiry">
-                </div>
-        </div>
-        
-        <!-- Section Delivery -->
-        <div class="section">
-            <h2>Delivery</h2>
-                <div class="form-group">
-                    <label for="delivery" class="delivery-option">
+            <!-- Section Profil -->
+            <div class="section">
+                <h2>Profil</h2>
+                <form method="post" action="../Controllers/paiementController.php">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Phone number:</label>
+                        <input type="text" id="number" name="number">
+                    </div>
 
-                    <input type="radio" name="delivery" value="post">
-                    <label for="delivery_post">
-                    <img src="../figs/laposte.JPG" alt="logolaposte" id="logolaposte">
-                    </label>
+                <!-- Section Address -->
+                    <h2>Address</h2>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                    <div class="form-group">
+                        <label for="postalCode">Postal Code:</label>
+                        <input type="text" id="postalCode" name="postalCode">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country:</label>
+                        <input type="text" id="country" name="country">
+                    </div>
+                    <div class="form-group">
+                        <label for="specification">Specification:</label>
+                        <input type="text" id="specification" name="specification">
+                    </div>
 
-                    <input type="radio" name="delivery" value="dhl">
-                    <label for="delivery_dhl">
-                    <img  src="../figs/Dhl.JPG" alt="logoDHL" id="logoDHL">
-                    </label>
+                <!-- Section Buy -->
+                    <h2>Buy</h2>
+                    <div class="form-group">
+                        <label for="cardType">Type of Card:</label>
+                        <select id="cardType" name="cardType">
+                            <option value="mastercard">Mastercard</option>
+                            <option value="visa">Visa</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardName">Name on Card:</label>
+                        <input type="text" id="cardName" name="cardName">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number:</label>
+                        <input type="text" id="cardNumber" name="cardNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardCVV">CVV:</label>
+                        <input type="text" id="cardCVV" name="cardCVV">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardExpiry">Expiry Date:</label>
+                        <input type="text" id="cardExpiry" name="cardExpiry">
+                    </div>
 
-                    <input type="radio" name="delivery" value="dpd">
-                    <label for="delivery_dpd">
-                    <img src="../figs/DPD.JPG" alt="logoDPD" id="logoDPD">
-                    </label>
-                </div>
-        </div>
-        
-        <!-- Button to submit the form -->
-        <button class="change_button">Submit Order</button>
-        </form>
+                <!-- Section Delivery -->
+                    <h2>Delivery</h2>
+                    <div class="form-group">
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery" value="post">
+                            <img src="../figs/laposte.JPG" alt="logolaposte" id="logolaposte">
+                        </label>
 
-    </main>
-    </div>
-    
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery" value="dhl">
+                            <img  src="../figs/Dhl.JPG" alt="logoDHL" id="logoDHL">
+                        </label>
+
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery" value="dpd">
+                            <img src="../figs/DPD.JPG" alt="logoDPD" id="logoDPD">
+                        </label>
+                    </div>
+
+                    <!-- Button to submit the form -->
+                    <button class="change_button">Submit Order</button>
+                </form>
+            </div>
+        </main>
+
     <?php include_footer_client(); ?>
 </body>
 </html>

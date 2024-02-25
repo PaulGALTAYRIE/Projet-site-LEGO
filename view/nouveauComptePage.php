@@ -38,7 +38,7 @@ include_once '../view/includes.php';
                 <label><b>Country</b></label><br>
                 <input type="text" name="country" id="country" placeholder="country"><br><br>
                 <label><b>Address</b></label><br>
-                <input type="text" name="address" id="address" placeholder="address"><br><br>
+                <input type="text" name="adress" id="adress" placeholder="address"><br><br>
                 <label><b>Postal Code</b></label><br> 
                 <input type="text" name="code_postal" id="code_postal" placeholder="code_postal"><br><br>
                 <label><b>Specification</b></label><br>   

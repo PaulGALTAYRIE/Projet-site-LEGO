@@ -70,7 +70,7 @@ require_once("../Models/utilisateurModel.php");
                 echo "<div class='cart'>";
                 echo "<div class='item'>";
 
-                echo "<img src='../figs/brique $pieceFormat $pieceColor.PNG' alt='Product Image'>";
+                echo "<img src='../figs/brique$pieceFormat$pieceColor.PNG' alt='Product Image'>";
 
                 echo "<div class='item-details'>";
                 echo "<h2>{$pieceName}</h2>";
